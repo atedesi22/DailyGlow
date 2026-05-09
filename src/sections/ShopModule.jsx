@@ -5,6 +5,8 @@ import { PRODUCTS } from '../data/products';
 export default function ShopModule() {
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [cart, setCart] = useState([]);
+    const [activeGender, setActiveGender] = useState('Femme');
+    const filteredProducts = PRODUCTS.filter(p => p.gender === activeGender);
 
     // Fonction pour ajouter au localStorage
     const addToCart = (product) => {
@@ -18,28 +20,49 @@ export default function ShopModule() {
     if (!selectedProduct) {
         return (
             <div className="pt-24 px-6 max-w-7xl mx-auto pb-20">
+
+                {/* Sélecteur d'Univers */}
+                <div className="flex justify-center gap-8 mb-12">
+                    {['Femme', 'Homme'].map((g) => (
+                    <button
+                        key={g}
+                        onClick={() => setActiveGender(g)}
+                        className={`text-xl font-serif pb-2 transition-all ${
+                        activeGender === g ? 'text-orange-700 border-b-2 border-orange-700' : 'text-gray-400'
+                        }`}
+                    >
+                        Univers {g}
+                    </button>
+                    ))}
+                </div>
                 <div className="mb-10 text-center">
                     <h2 className="text-4xl font-serif text-orange-950">Le Catalogue</h2>
                     <p className="text-gray-500">Trouvez la pièce qui vous fera briller.</p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    {PRODUCTS.map((product) => (
-                        <div
-                            key={product.id}
-                            className="bg-white border border-orange-50 rounded-2xl p-3 hover:shadow-xl transition group cursor-pointer"
-                            onClick={() => setSelectedProduct(product)}
-                        >
-                            <div className="relative aspect-square overflow-hidden rounded-xl mb-4">
-                                <img src={product.image} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                                <span className="absolute top-2 right-2 bg-white/90 px-2 py-1 rounded-md text-[10px] font-bold text-orange-700 uppercase">
-                                    {product.category}
-                                </span>
-                            </div>
-                            <h4 className="font-medium text-gray-900 truncate">{product.name}</h4>
-                            <p className="text-orange-800 font-bold">{product.price.toLocaleString()} FCFA</p>
+                {/* Grille de Produits */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-6 max-w-7xl mx-auto">
+                    {filteredProducts.map((product) => (
+                    <div 
+                        key={product.id}
+                        className="group cursor-pointer bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition"
+                        onClick={() => setSelectedProduct(product)}
+                    >
+                        <div className="aspect-square bg-gray-50 rounded-lg mb-4 overflow-hidden">
+                        <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
                         </div>
+                        <h3 className="font-serif text-orange-950">{product.name}</h3>
+                        <p className="text-orange-700 font-bold">{product.price}</p>
+                    </div>
                     ))}
+                </div>
+
+                {/* Bouton de Connexion NovaVerse (Signature de l'écosystème) */}
+                <div className="mt-20 text-center border-t border-orange-50 pt-10">
+                    <p className="text-sm text-gray-500 mb-4">Pour une expérience personnalisée</p>
+                    <button className="bg-black text-white px-6 py-2 rounded-full flex items-center gap-2 mx-auto hover:bg-gray-800 transition">
+                    Se connecter avec NovaVerse
+                    </button>
                 </div>
             </div>
         );
