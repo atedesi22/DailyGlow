@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { ShoppingBag } from 'lucide-react';
 
-const PRODUCTS = [
+const products = [
   { id: 1, name: "Montre Chrono Or", gender: "Homme", category: "Montres", price: "125 000", image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800" },
   { id: 2, name: "Bracelet Luxe", gender: "Homme", category: "Montres", price: "125 000", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=800" },
   { id: 3, name: "Collier Perle Rare", gender: "Femme", category: "Bijoux", price: "85 000", image: "https://images.unsplash.com/photo-1605100804763-247f67b3f416?auto=format&fit=crop&q=80&w=800" },
   { id: 4, name: "Montre Or Rose", gender: "Femme", category: "Bijoux", price: "85 000", image: "https://images.unsplash.com/photo-1542491595-652395d44a27?auto=format&fit=crop&q=80&w=800" },
 ];
 
-export default function ShopModule({ onAddToCart }) {
+export default function ShopModule({ onAddToCart, onViewDetails }) {
   const [activeGender, setActiveGender] = useState('Femme');
 
   return (
@@ -26,8 +26,8 @@ export default function ShopModule({ onAddToCart }) {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8">
-        {PRODUCTS.filter(p => p.gender === activeGender).map(product => (
-          <div key={product.id} className="bg-white p-3 rounded-2xl shadow-sm border border-pink-50">
+        {products.filter(p => p.gender === activeGender).map(product => (
+          <div key={product.id} onClick={() => onViewDetails(product)} className="bg-white p-3 rounded-2xl shadow-sm border border-pink-50">
             <div className="aspect-square bg-pink-50 rounded-xl mb-3 overflow-hidden">
               <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
             </div>

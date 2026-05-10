@@ -1,7 +1,12 @@
 import { X, Trash2, MessageCircle } from 'lucide-react';
 
-export default function Cart({ isOpen, onClose, cartItems }) {
-  const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+export default function Cart({ isOpen, onClose, cartItems, onRemove }) {
+  // Calcul de la somme totale
+  const total = cartItems.reduce((sum, item) => {
+    // On enlève les espaces dans "125 000" pour pouvoir le convertir en nombre
+    const price = parseInt(item.price.replace(/\s/g, '')); 
+    return sum + price;
+  }, 0);
 
   return (
     <div className={`fixed inset-0 z-50 ${isOpen ? 'visible' : 'invisible'}`}>
