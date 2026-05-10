@@ -1,24 +1,20 @@
 import { ArrowLeft, MessageCircle } from 'lucide-react';
 
-export default function ProductDetails({ product, onBack }) {
+export default function ProductDetails({ product, onBack, cartItems, total }) {
   
   // Fonction pour générer le lien WhatsApp direct pour ce produit précis
   const generateWhatsAppMessage = (cartItems, total) => {
   const phoneNumber = "237676871669"; // Ton numéro WhatsApp au format international
-  
-  let message = `Bonjour DailyGlow ! ✨\n\nJe souhaite passer une commande :\n`;
-  
-  cartItems.forEach((item, index) => {
-    message += `${index + 1}. *${item.name}* - ${item.price} FCFA\n`;
-  });
+    
+  let message = `Bonjour DailyGlow ! ✨\n\nJe souhaite commander cet article :\n`;
+    message += `- *${product.name}*\n`;
+    message += `- *Prix : ${product.price} FCFA*\n`;
+    message += `- Collection : ${product.gender}\n\n`;
+    message += `Est-il toujours disponible ? Merci !`;
 
-  message += `\n*Total : ${total.toLocaleString()} FCFA*\n`;
-  message += `\nMerci de me confirmer la disponibilité et les modalités de livraison.`;
-
-  // Encodage pour l'URL
-  const encodedMessage = encodeURIComponent(message);
-  return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-};
+    const encodedMessage = encodeURIComponent(message);
+    return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  };
 
   return (
     <div className="pt-20 px-6 pb-32 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
