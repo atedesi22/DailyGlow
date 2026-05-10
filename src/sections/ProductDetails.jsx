@@ -3,16 +3,22 @@ import { ArrowLeft, MessageCircle } from 'lucide-react';
 export default function ProductDetails({ product, onBack }) {
   
   // Fonction pour générer le lien WhatsApp direct pour ce produit précis
-  const getWhatsAppLink = () => {
-    const phoneNumber = "2376XXXXXXXX"; // Ton numéro WhatsApp (format international)
-    const message = `Bonjour DailyGlow ! ✨\n\nJe suis intéressé par l'article suivant :\n` +
-                    `- Produit : *${product.name}*\n` +
-                    `- Prix : *${product.price} FCFA*\n` +
-                    `- Catégorie : ${product.gender}\n\n` +
-                    `Est-il toujours disponible ? Merci !`;
-    
-    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  };
+  const generateWhatsAppMessage = (cartItems, total) => {
+  const phoneNumber = "237676871669"; // Ton numéro WhatsApp au format international
+  
+  let message = `Bonjour DailyGlow ! ✨\n\nJe souhaite passer une commande :\n`;
+  
+  cartItems.forEach((item, index) => {
+    message += `${index + 1}. *${item.name}* - ${item.price} FCFA\n`;
+  });
+
+  message += `\n*Total : ${total.toLocaleString()} FCFA*\n`;
+  message += `\nMerci de me confirmer la disponibilité et les modalités de livraison.`;
+
+  // Encodage pour l'URL
+  const encodedMessage = encodeURIComponent(message);
+  return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+};
 
   return (
     <div className="pt-20 px-6 pb-32 max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -46,12 +52,13 @@ export default function ProductDetails({ product, onBack }) {
 
       {/* Bouton de Commande WhatsApp Fixe */}
       <a 
-        href={getWhatsAppLink()}
+        href={generateWhatsAppMessage(cartItems, total)}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-24 left-6 right-6 md:static bg-pink-950 text-white py-4 rounded-2xl flex items-center justify-center gap-3 font-bold shadow-lg shadow-green-900/10 hover:bg-[#128C7E] transition-all active:scale-95"
+        className="w-full bg-pink-950 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-[#128C7E] transition-colors shadow-lg shadow-green-900/10"
       >
-        <MessageCircle size={20} /> Commander via WhatsApp
+        <MessageCircle size={20} />
+        Commander via WhatsApp
       </a>
     </div>
   );
