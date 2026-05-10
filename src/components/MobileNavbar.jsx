@@ -20,7 +20,7 @@ export function MobileNavbar({ onNavigate, cartCount, activePage }) {
           <item.icon size={20} strokeWidth={activePage === item.id ? 2.5 : 2} />
           <span className="text-[9px] mt-1 font-bold">{item.label}</span>
           
-          {/* Badge Panier spécifique sur l'icône Panier */}
+          {/* Badge Panier spécifiqujkkje sur l'icône Panier */}
           {item.id === 'cart' && cartCount > 0 && (
             <span className="absolute -top-2 -right-2 bg-pink-700 text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full border border-white">
               {cartCount}
