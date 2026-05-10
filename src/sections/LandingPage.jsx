@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import InstallButton from '../components/InstallButton';
 
 export default function LandingPage({ onExplore }) {
   return (
@@ -18,6 +19,9 @@ export default function LandingPage({ onExplore }) {
           >
             Découvrir la Collection <ChevronRight size={18} />
           </button>
+          
+          {/* Bouton de téléchargement PWA */}
+          <InstallButton/>
         </div>
       </section>
 

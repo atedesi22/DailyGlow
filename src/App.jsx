@@ -33,16 +33,36 @@ export default function App() {
     setCart(cart.filter(item => item.cartId !== cartId));
   };
 
+  // Logique pour la somme totale du panier
+const calculateTotal = () => {
+  return cart.reduce((sum, item) => {
+    // Nettoyage de la chaîne "125 000" pour le calcul
+    const price = parseInt(item.price.replace(/\s/g, '')); 
+    return sum + price;
+  }, 0);
+};
+
+// Affichage des détails et produits similaires
+const handleViewDetails = (product) => {
+  setSelectedProduct(product);
+  // Filtrage des produits similaires par catégorie
+  const similar = allProducts.filter(p => p.category === product.category && p.id !== product.id);
+  setRelatedProducts(similar);
+  setCurrentPage('details');
+};
+
   // --- NAVIGATION ---
-  const handleViewDetails = (product) => {
-    setSelectedProduct(product);
-    setCurrentPage('details');
-  };
+  // const handleViewDetails = (product) => {
+  //   setSelectedProduct(product);
+  //   setCurrentPage('details');
+  // };
 
   // Scroll to top automatique à chaque changement de page
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
+
+  
 
   return (
     <div className="min-h-screen bg-[#FFFDFB] text-pink-950 font-sans pb-24 md:pb-0 selection:bg-pink-100">
