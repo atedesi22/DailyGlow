@@ -59,6 +59,7 @@ export default function ShopModule({ onAddToCart, onViewDetails }) {
           {filteredProducts.map(product => (
             <div 
               key={product.id} 
+              onClick={() => onViewDetails(product)}
               className="bg-white p-3 rounded-2xl shadow-sm border border-pink-50 group hover:shadow-md transition-shadow cursor-pointer"
             >
               <div 
