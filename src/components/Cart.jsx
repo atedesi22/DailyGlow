@@ -77,27 +77,27 @@ const handleInputChange = (e) => {
           </div> */}
 
           <div className="border-t border-orange-100 pt-6 mt-4">
-  <div className="flex justify-between items-center mb-6">
-    <span className="uppercase text-xs tracking-widest text-gray-400">Total à payer</span>
-    <span className="text-xl font-bold text-orange-950">
-      {total.toLocaleString()} FCFA
-    </span>
-  </div>
+            <div className="flex justify-between items-center mb-6">
+              <span className="uppercase text-xs tracking-widest text-gray-400">Total à payer</span>
+              <span className="text-xl font-bold text-orange-950">
+                {total.toLocaleString()} FCFA
+              </span>
+            </div>
   
-  <a 
-    href={generateWhatsAppMessage(cartItems, total)}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-[#128C7E] transition-colors shadow-lg shadow-green-900/10"
-  >
-    <MessageCircle size={20} />
-    Commander via WhatsApp
-  </a>
-  
-  <p className="text-[10px] text-center text-gray-400 mt-4 italic">
-    Vous allez être redirigé vers notre service client.
-  </p>
-</div>
+            <a 
+              href={generateWhatsAppMessage(cartItems, total)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-pink-950 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-[#128C7E] transition-colors shadow-lg shadow-green-900/10"
+            >
+              <MessageCircle size={20} />
+              Commander via WhatsApp
+            </a>
+            
+            <p className="text-[10px] text-center text-gray-400 mt-4 italic">
+              Vous allez être redirigé vers notre service client.
+            </p>
+          </div>
         </div>
       </div>
     </div>
