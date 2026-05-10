@@ -45,7 +45,7 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [currentPage]);
   return (
-    <div className="min-h-screen bg-[#FFFDFB] text-orange-950 font-sans selection:bg-orange-100 pb-20 md:pb-0">
+    <div className="min-h-screen bg-[#FFFDFB] text-pink-950 font-sans selection:bg-pink-100 pb-20 md:pb-0">
       
       {/* Barre de navigation supérieure (Desktop & Mobile) */}
       <Navbar 
@@ -54,7 +54,7 @@ export default function App() {
       />
 
       {/* Rendu dynamique des pages */}
-      <main className="transition-all duration-300">
+      <main className="transition-all duration-300 pb-32">
         {currentPage === 'landing' && (
           <LandingPage onExplore={() => setCurrentPage('shop')} />
         )}
@@ -107,7 +107,7 @@ export default function App() {
       />
 
       {/* Footer minimaliste (visible uniquement sur desktop ou fin de scroll) */}
-      <footer className="hidden md:block py-12 text-center border-t border-orange-50 mt-20">
+      <footer className="hidden md:block py-12 text-center border-t border-pink-50 mt-20">
         <p className="text-xs text-gray-400 tracking-widest uppercase">
           DailyGlow — Membre de l'Écosystème NovaVerse
         </p>

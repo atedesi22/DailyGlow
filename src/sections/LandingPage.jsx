@@ -8,13 +8,13 @@ export default function LandingPage({ onExplore }) {
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center opacity-20" />
         <div className="relative text-center px-6 z-10">
-          <h2 className="text-orange-700 tracking-[0.3em] uppercase text-sm mb-4">L'art de l'éclat</h2>
-          <h1 className="text-5xl md:text-7xl font-serif text-orange-950 mb-8 leading-tight">
+          <h2 className="text-pink-700 tracking-[0.3em] uppercase text-sm mb-4">L'art de l'éclat</h2>
+          <h1 className="text-5xl md:text-7xl font-serif text-pink-950 mb-8 leading-tight">
             DailyGlow <br /> <span className="italic">Bijoux & Montres</span>
           </h1>
           <button 
             onClick={onExplore}
-            className="border border-orange-950 text-orange-950 px-10 py-4 rounded-full hover:bg-orange-950 hover:text-white transition-all duration-500 flex items-center gap-3 mx-auto"
+            className="border border-pink-950 text-pink-950 px-10 py-4 rounded-full hover:bg-pink-950 hover:text-white transition-all duration-500 flex items-center gap-3 mx-auto"
           >
             Découvrir la Collection <ChevronRight size={18} />
           </button>
@@ -38,7 +38,7 @@ export default function LandingPage({ onExplore }) {
       </section>
 
       {/* Section NovaVerse Connection */}
-      <section className="bg-orange-50/50 py-20 text-center px-6 mb-20">
+      <section className="bg-pink-50/50 py-20 text-center px-6 mb-20">
         <h4 className="font-serif text-2xl mb-4">Connectée à votre écosystème</h4>
         <p className="text-gray-500 text-sm mb-8 max-w-md mx-auto">
           Retrouvez vos avantages et votre historique grâce à la connexion unifiée NovaVerse.

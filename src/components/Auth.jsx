@@ -2,7 +2,7 @@ export default function Auth({ onLogin }) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 bg-[#FFFDFB]">
       <div className="w-full max-w-sm text-center">
-        <h2 className="text-3xl font-serif mb-2 text-orange-950">Bienvenue</h2>
+        <h2 className="text-3xl font-serif mb-2 text-pink-950">Bienvenue</h2>
         <p className="text-gray-500 text-sm mb-10">Accédez à l'univers DailyGlow via votre NovaID</p>
         
         <button 
