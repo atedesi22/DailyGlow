@@ -1,26 +1,29 @@
 import React, { useState, useEffect } from 'react';
-// Importation des composants et sections
-import Navbar from './components/Navbar';
-import { MobileNavbar } from './components/MobileNavbar';
+
+// Sections & Modules
 import LandingPage from './sections/LandingPage';
 import ShopModule from './sections/ShopModule';
 import ProductDetails from './sections/ProductDetails';
+import Contact from './sections/Contact';
+import Faq from './sections/Faq';
+
+// Composants Globaux
+import Navbar from './components/Navbar';
+import { MobileNavbar } from './components/MobileNavbar';
 import { UserProfile } from './components/UserProfile';
 import AdminDashboard from './components/AdminDashboard';
-import Auth from './components/Auth';
-import Cart from './components/Cart';
-import Faq from './sections/Faq';
+import UserDashboard from './components/UserDashboard';
 import PartnerSlider from './components/PartnerSlider';
+import Cart from './components/Cart';
 
 export default function App() {
-  // --- ÉTATS GLOBAUX ---
-  const [currentPage, setCurrentPage] = useState('landing'); // landing, shop, details, profile, admin, auth, faq
+  // --- ÉTATS ---
+  const [currentPage, setCurrentPage] = useState('landing'); 
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cart, setCart] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // --- LOGIQUE DU PANIER ---
+  // --- LOGIQUE PANIER ---
   const addToCart = (product) => {
     setCart([...cart, { ...product, cartId: Date.now() }]);
     setIsCartOpen(true);
@@ -30,50 +33,40 @@ export default function App() {
     setCart(cart.filter(item => item.cartId !== cartId));
   };
 
-  // --- LOGIQUE DE NAVIGATION ---
-  const navigateToDetails = (product) => {
+  // --- NAVIGATION ---
+  const handleViewDetails = (product) => {
     setSelectedProduct(product);
     setCurrentPage('details');
   };
 
-  const handleLogin = () => {
-    setIsAuthenticated(true);
-    setCurrentPage('profile');
-  };
-
-  // Remonter en haut de page à chaque changement de vue
+  // Scroll to top automatique à chaque changement de page
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
-  return (
-    <div className="min-h-screen bg-[#FFFDFB] text-pink-950 font-sans selection:bg-pink-100 pb-20 md:pb-0">
-      
-      {/* Barre de navigation supérieure (Desktop & Mobile) */}
-      <Navbar 
-        onNavigate={setCurrentPage} 
-        isAuthenticated={isAuthenticated} 
-      />
 
-      {/* Rendu dynamique des pages */}
-      <main className="transition-all duration-300 pb-32">
+  return (
+    <div className="min-h-screen bg-[#FFFDFB] text-pink-950 font-sans pb-24 md:pb-0 selection:bg-pink-100">
+      
+      {/* Barre de navigation supérieure */}
+      <Navbar onNavigate={setCurrentPage} />
+
+      {/* Zone de contenu principale */}
+      <main className="transition-all duration-300">
         {currentPage === 'landing' && (
           <>
             <LandingPage onExplore={() => setCurrentPage('shop')} />
-            {/* Publicité partenaire stratégique sur la Landing Page */}
-              <PartnerSlider type="banner" />
+            <PartnerSlider />
           </>
-          
         )}
 
         {currentPage === 'shop' && (
           <>
             <ShopModule 
               onAddToCart={addToCart} 
-              onViewDetails={(p) => { setSelectedProduct(p); setCurrentPage('details'); }} 
+              onViewDetails={handleViewDetails} 
             />
-            {/* Section bento partenaires en bas de catalogue */}
-            <div className="border-t border-orange-50 mt-10">
-                <PartnerSlider type="horizontal" />
+            <div className="border-t border-pink-50/50 mt-12 pt-12">
+               <PartnerSlider />
             </div>
           </>
         )}
@@ -86,24 +79,24 @@ export default function App() {
           />
         )}
 
-        {currentPage === 'auth' && (
-          <Auth onLogin={handleLogin} />
-        )}
+        {currentPage === 'contact' && <Contact />}
 
         {currentPage === 'profile' && (
-          isAuthenticated ? <UserProfile /> : <Auth onLogin={handleLogin} />
+          <UserProfile onNavigate={setCurrentPage} />
         )}
 
         {currentPage === 'admin' && (
-          <AdminDashboard />
+          <AdminDashboard onBack={() => setCurrentPage('profile')} />
         )}
 
-        {currentPage === 'faq' && (
-          <Faq />
+        {currentPage === 'user-dashboard' && (
+          <UserDashboard onBack={() => setCurrentPage('profile')} />
         )}
+
+        {currentPage === 'faq' && <Faq />}
       </main>
 
-      {/* Composants Overlay (Panier) */}
+      {/* Overlay du Panier (WhatsApp Ready) */}
       <Cart 
         isOpen={isCartOpen} 
         onClose={() => setIsCartOpen(false)} 
@@ -111,17 +104,32 @@ export default function App() {
         onRemove={removeFromCart}
       />
 
-      {/* Navigation Mobile fixée en bas (Ergonomie smartphone) */}
+      {/* Navigation Mobile (Sans lien admin direct pour plus de pureté) */}
       <MobileNavbar 
         onNavigate={setCurrentPage} 
         cartCount={cart.length}
         activePage={currentPage}
       />
 
-      {/* Footer minimaliste (visible uniquement sur desktop ou fin de scroll) */}
-      <footer className="hidden md:block py-12 text-center border-t border-pink-50 mt-20">
-        <p className="text-xs text-gray-400 tracking-widest uppercase">
-          DailyGlow — Membre de l'Écosystème NovaVerse
+      {/* Overlay du Panier */}
+      <Cart 
+        isOpen={isCartOpen} 
+        onClose={() => setIsCartOpen(false)} 
+        cartItems={cart} 
+        onRemove={removeFromCart}
+      />
+
+      {/* Barre de navigation mobile fixée en bas */}
+      <MobileNavbar 
+        onNavigate={setCurrentPage} 
+        cartCount={cart.length}
+        activePage={currentPage}
+      />
+
+      {/* Footer (Desktop uniquement) */}
+      <footer className="hidden md:block py-16 text-center border-t border-pink-50 mt-20">
+        <p className="text-[10px] text-gray-400 tracking-[0.3em] uppercase">
+          DailyGlow — Excellence & Prestige
         </p>
       </footer>
     </div>

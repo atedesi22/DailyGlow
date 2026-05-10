@@ -60,7 +60,7 @@ import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 
             {/* Contenu */}
             <div className="relative h-full flex flex-col justify-center px-8 md:px-16 text-white">
-              <span className="text-[10px] uppercase tracking-[0.3em] bg-orange-700/80 w-fit px-3 py-1 rounded-full mb-4">
+              <span className="text-[10px] uppercase tracking-[0.3em] bg-pink-700/80 w-fit px-3 py-1 rounded-full mb-4">
                 {partner.tag}
               </span>
               <h3 className="text-4xl md:text-5xl font-serif mb-4 leading-tight">
@@ -69,7 +69,7 @@ import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
               <p className="text-gray-200 text-sm md:text-base max-w-md mb-8">
                 {partner.desc}
               </p>
-              <button className="bg-white text-black px-8 py-3 rounded-full font-bold text-sm w-fit flex items-center gap-2 hover:bg-orange-50 transition">
+              <button className="bg-white text-black px-8 py-3 rounded-full font-bold text-sm w-fit flex items-center gap-2 hover:bg-pink-50 transition">
                 Découvrir <ExternalLink size={16} />
               </button>
             </div>
