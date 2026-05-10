@@ -62,6 +62,13 @@ const handleViewDetails = (product) => {
     window.scrollTo(0, 0);
   }, [currentPage]);
 
+  const products = [
+  { id: 1, name: "Montre Chrono Or", gender: "Homme", category: "Montres", price: "125 000", image: "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800" },
+  { id: 2, name: "Bracelet Luxe", gender: "Homme", category: "Montres", price: "125 000", image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=800" },
+  { id: 3, name: "Collier Perle Rare", gender: "Femme", category: "Bijoux", price: "85 000", image: "https://images.unsplash.com/photo-1605100804763-247f67b3f416?auto=format&fit=crop&q=80&w=800" },
+  { id: 4, name: "Montre Or Rose", gender: "Femme", category: "Bijoux", price: "85 000", image: "https://images.unsplash.com/photo-1542491595-652395d44a27?auto=format&fit=crop&q=80&w=800" },
+];
+
   
 
   return (

@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { X, Trash2, MessageCircle } from 'lucide-react';
 
 export default function Cart({ isOpen, onClose, cartItems, onRemove }) {
@@ -9,7 +10,7 @@ export default function Cart({ isOpen, onClose, cartItems, onRemove }) {
   }, 0);
 
   const generateWhatsAppMessage = (cartItems, total) => {
-  const phoneNumber = "237657844402"; // Ton numéro WhatsApp au format international
+  const phoneNumber = "237676871669"; // Ton numéro WhatsApp au format international
   
   let message = `Bonjour DailyGlow ! ✨\n\nJe souhaite passer une commande :\n`;
   
@@ -23,6 +24,16 @@ export default function Cart({ isOpen, onClose, cartItems, onRemove }) {
   // Encodage pour l'URL
   const encodedMessage = encodeURIComponent(message);
   return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+};
+
+const [customerInfo, setCustomerInfo] = useState({
+  name: '',
+  location: ''
+});
+
+const handleInputChange = (e) => {
+  const { name, value } = e.target;
+  setCustomerInfo(prev => ({ ...prev, [name]: value }));
 };
 
   return (
