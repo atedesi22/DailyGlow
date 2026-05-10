@@ -8,6 +8,23 @@ export default function Cart({ isOpen, onClose, cartItems, onRemove }) {
     return sum + price;
   }, 0);
 
+  const generateWhatsAppMessage = (cartItems, total) => {
+  const phoneNumber = "237657844402"; // Ton numéro WhatsApp au format international
+  
+  let message = `Bonjour DailyGlow ! ✨\n\nJe souhaite passer une commande :\n`;
+  
+  cartItems.forEach((item, index) => {
+    message += `${index + 1}. *${item.name}* - ${item.price} FCFA\n`;
+  });
+
+  message += `\n*Total : ${total.toLocaleString()} FCFA*\n`;
+  message += `\nMerci de me confirmer la disponibilité et les modalités de livraison.`;
+
+  // Encodage pour l'URL
+  const encodedMessage = encodeURIComponent(message);
+  return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+};
+
   return (
     <div className={`fixed inset-0 z-50 ${isOpen ? 'visible' : 'invisible'}`}>
       {/* Overlay */}
@@ -34,7 +51,7 @@ export default function Cart({ isOpen, onClose, cartItems, onRemove }) {
             ))}
           </div>
 
-          <div className="border-t fixed bottom-28  border-pink-100 pt-26">
+          {/* <div className="border-t fixed bottom-28  border-pink-100 pt-26">
             <div className="flex justify-between mb-4 text-xl font-serif">
               <span>Total</span>
               <span className="text-red-950">{total} FCFA</span>
@@ -46,7 +63,30 @@ export default function Cart({ isOpen, onClose, cartItems, onRemove }) {
               <MessageCircle size={20} />
               Commander via WhatsApp
             </button>
-          </div>
+          </div> */}
+
+          <div className="border-t border-orange-100 pt-6 mt-4">
+  <div className="flex justify-between items-center mb-6">
+    <span className="uppercase text-xs tracking-widest text-gray-400">Total à payer</span>
+    <span className="text-xl font-bold text-orange-950">
+      {total.toLocaleString()} FCFA
+    </span>
+  </div>
+  
+  <a 
+    href={generateWhatsAppMessage(cartItems, total)}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 hover:bg-[#128C7E] transition-colors shadow-lg shadow-green-900/10"
+  >
+    <MessageCircle size={20} />
+    Commander via WhatsApp
+  </a>
+  
+  <p className="text-[10px] text-center text-gray-400 mt-4 italic">
+    Vous allez être redirigé vers notre service client.
+  </p>
+</div>
         </div>
       </div>
     </div>
