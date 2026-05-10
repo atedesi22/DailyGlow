@@ -10,6 +10,7 @@ import AdminDashboard from './components/AdminDashboard';
 import Auth from './components/Auth';
 import Cart from './components/Cart';
 import Faq from './sections/Faq';
+import PartnerSlider from './components/PartnerSlider';
 
 export default function App() {
   // --- ÉTATS GLOBAUX ---
@@ -56,14 +57,25 @@ export default function App() {
       {/* Rendu dynamique des pages */}
       <main className="transition-all duration-300 pb-32">
         {currentPage === 'landing' && (
-          <LandingPage onExplore={() => setCurrentPage('shop')} />
+          <>
+            <LandingPage onExplore={() => setCurrentPage('shop')} />
+            {/* Publicité partenaire stratégique sur la Landing Page */}
+              <PartnerSlider type="banner" />
+          </>
+          
         )}
 
         {currentPage === 'shop' && (
-          <ShopModule 
-            onAddToCart={addToCart} 
-            onViewDetails={navigateToDetails} 
-          />
+          <>
+            <ShopModule 
+              onAddToCart={addToCart} 
+              onViewDetails={(p) => { setSelectedProduct(p); setCurrentPage('details'); }} 
+            />
+            {/* Section bento partenaires en bas de catalogue */}
+            <div className="border-t border-orange-50 mt-10">
+                <PartnerSlider type="horizontal" />
+            </div>
+          </>
         )}
 
         {currentPage === 'details' && selectedProduct && (

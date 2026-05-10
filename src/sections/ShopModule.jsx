@@ -25,7 +25,7 @@ export default function ShopModule({ onAddToCart }) {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8">
         {PRODUCTS.filter(p => p.gender === activeGender).map(product => (
           <div key={product.id} className="bg-white p-3 rounded-2xl shadow-sm border border-pink-50">
             <div className="aspect-square bg-pink-50 rounded-xl mb-3 overflow-hidden">
