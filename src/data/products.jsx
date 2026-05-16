@@ -357,7 +357,7 @@ export const productsData = [
     {
         id: 33,
         name: "Montre Casio",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme1.jpeg",
@@ -368,7 +368,7 @@ export const productsData = [
     {
         id: 34,
         name: "Montre Casio",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme2.jpeg",
@@ -379,7 +379,7 @@ export const productsData = [
     {
         id: 35,
         name: "Montre Casio",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme3.jpeg",
@@ -390,7 +390,7 @@ export const productsData = [
     {
         id: 36,
         name: "Montre Casio",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme4.jpeg",
@@ -401,7 +401,7 @@ export const productsData = [
     {
         id: 37,
         name: "Montre Casio",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme5.jpeg",
@@ -412,7 +412,7 @@ export const productsData = [
     {
         id: 38,
         name: "Montre Casio",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme6.jpeg",
@@ -423,7 +423,7 @@ export const productsData = [
     {
         id: 39,
         name: "Montre Casio",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme7.jpeg",
@@ -434,7 +434,7 @@ export const productsData = [
     {
         id: 40,
         name: "Montre Casio",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme8.jpeg",
@@ -445,7 +445,7 @@ export const productsData = [
     {
         id: 41,
         name: "Montre Casio",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme9.jpeg",
@@ -456,7 +456,7 @@ export const productsData = [
     {
         id: 42,
         name: "Montre BOSS",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 12000,
         image: "/montrehomme/montrehomme10.jpeg",
@@ -467,7 +467,7 @@ export const productsData = [
     {
         id: 43,
         name: "Montre BOSS",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 12000,
         image: "/montrehomme/montrehomme11.jpeg",
@@ -478,7 +478,7 @@ export const productsData = [
     {
         id: 44,
         name: "Montre BOSS",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 12000,
         image: "/montrehomme/montrehomme12.jpeg",
@@ -489,7 +489,7 @@ export const productsData = [
     {
         id: 45,
         name: "Montre BOSS",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 12000,
         image: "/montrehomme/montrehomme13.jpeg",
@@ -500,7 +500,7 @@ export const productsData = [
     {
         id: 46,
         name: "Montre EMPORIO ARMANI",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 15000,
         image: "/montrehomme/montrehomme14.jpeg",
@@ -511,7 +511,7 @@ export const productsData = [
     {
         id: 47,
         name: "Montre EMPORIO ARMANI",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 15000,
         image: "/montrehomme/montrehomme15.jpeg",
@@ -522,7 +522,7 @@ export const productsData = [
     {
         id: 48,
         name: "Montre TISSOT",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 14000,
         image: "/montrehomme/montrehomme16.jpeg",
@@ -533,7 +533,7 @@ export const productsData = [
     {
         id: 49,
         name: "Montre TISSOT",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 14000,
         image: "/montrehomme/montrehomme17.jpeg",
@@ -544,7 +544,7 @@ export const productsData = [
     {
         id: 50,
         name: "Montre Rolex",
-        category: "Bijoux",
+        category: "Montres",
         gender: "Homme",
         price: 14000,
         image: "/montrehomme/montrehomme19.jpeg",
