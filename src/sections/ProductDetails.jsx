@@ -11,8 +11,8 @@ export default function ProductDetails({ product, onBack, cartItems, total }) {
     message += `- *${product.name}*\n`;
     message += `- *Prix : ${product.price} FCFA*\n`;
     message += `- Collection : ${product.gender}\n\n`;
-    message += `Voir le produit : ${productImageUrl}`;
-    message += `\n\nEst-il toujours disponible ? Merci !`;
+    message += `Voir le produit : ${productImageUrl}\n\n`;
+    message += `Est-il toujours disponible ? Merci !`;
 
     const encodedMessage = encodeURIComponent(message);
     return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
