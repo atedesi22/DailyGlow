@@ -12,7 +12,7 @@ export default function ProductDetails({ product, onBack, cartItems, total }) {
     message += `- *Prix : ${product.price} FCFA*\n`;
     message += `- Collection : ${product.gender}\n\n`;
     message += `Voir le produit : ${productImageUrl}`;
-    message += `Est-il toujours disponible ? Merci !`;
+    message += `\n\nEst-il toujours disponible ? Merci !`;
 
     const encodedMessage = encodeURIComponent(message);
     return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;

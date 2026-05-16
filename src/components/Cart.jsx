@@ -3,15 +3,21 @@ import { X, Trash2, MessageCircle } from 'lucide-react';
 
 export default function Cart({ isOpen, onClose, cartItems, onRemove }) {
   // Calcul de la somme totale
-  const total = cartItems.reduce((sum, item) => {
-    // On enlève les espaces dans "125 000" pour pouvoir le convertir en nombre
-    const price = parseInt(item.price.replace(/\s/g, '')); 
-    return sum + price;
+  const total  = () => {
+  return cart.reduce((sum, item) => {
+    // 1. On force la conversion en chaîne de caractères avec String()
+    const priceString = String(item.price); 
+    
+    // 2. Maintenant on peut nettoyer les espaces en toute sécurité
+    const cleanPrice = priceString.replace(/\s/g, ''); 
+    
+    // 3. On convertit en entier pour l'addition
+    return sum + parseInt(cleanPrice, 10);
   }, 0);
+};
 
   const generateWhatsAppMessage = (cartItems, total) => {
   const phoneNumber = "237676871669"; // Ton numéro WhatsApp au format international
-  
   const siteUrl = "https://daily-glow-eta.vercel.app"; // L'URL de ton site en production
   
   let message = `Bonjour DailyGlow ! ✨\n\nJe souhaite passer une commande groupée :\n\n`;
