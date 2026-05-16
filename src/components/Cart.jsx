@@ -3,8 +3,7 @@ import { X, Trash2, MessageCircle } from 'lucide-react';
 
 export default function Cart({ isOpen, onClose, cartItems, onRemove }) {
   // Calcul de la somme totale
-  const total  = () => {
-  return cart.reduce((sum, item) => {
+  const total = cartItems.reduce((sum, item) => {
     // 1. On force la conversion en chaîne de caractères avec String()
     const priceString = String(item.price); 
     
@@ -14,7 +13,6 @@ export default function Cart({ isOpen, onClose, cartItems, onRemove }) {
     // 3. On convertit en entier pour l'addition
     return sum + parseInt(cleanPrice, 10);
   }, 0);
-};
 
   const generateWhatsAppMessage = (cartItems, total) => {
   const phoneNumber = "237676871669"; // Ton numéro WhatsApp au format international

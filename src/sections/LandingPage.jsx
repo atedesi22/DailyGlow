@@ -9,7 +9,7 @@ export default function LandingPage({ onExplore }) {
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center opacity-20" />
         <div className="relative text-center px-6 z-10">
-          <h2 className="text-pink-700 tracking-[0.3em] uppercase text-sm mb-4">L'art de l'éclat</h2>
+          <h2 className="text-pink-700 tracking-[0.3em] uppercase text-sm mb-4">Brillez chaque jour</h2>
           <h1 className="text-5xl md:text-7xl font-serif text-pink-950 mb-8 leading-tight">
             DailyGlow <br /> <span className="italic">Bijoux & Montres</span>
           </h1>
