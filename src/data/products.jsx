@@ -6,6 +6,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/baya/baya1.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -17,6 +23,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/baya/baya3.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -28,6 +40,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/baya/baya2.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -39,6 +57,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/baya/baya4.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -50,6 +74,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chevillere/chevillere4.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -61,6 +91,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chevillere/chevillere1.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -72,6 +108,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chevillere/chevillere6.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -83,6 +125,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chevillere/chevillere2.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -94,6 +142,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chevillere/chevillere3.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -105,6 +159,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chevillere/chevillere5.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -116,6 +176,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine20.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -127,6 +193,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine2.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -138,6 +210,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine5.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -149,6 +227,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine1.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -160,6 +244,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine8.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -171,6 +261,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine3.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -182,6 +278,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine4.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -193,6 +295,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine6.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -204,6 +312,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine19.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -215,6 +329,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine18.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -226,6 +346,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine17.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -237,6 +363,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine16.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -248,6 +380,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine15.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -259,6 +397,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine14.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -270,6 +414,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine13.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -281,6 +431,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine12.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -292,6 +448,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine11.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -303,6 +465,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine10.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -317,6 +485,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine9.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -328,6 +502,12 @@ export const productsData = [
         gender: "Femme",
         category: "Bijoux",
         image: "/chaine/chaine8.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -339,6 +519,12 @@ export const productsData = [
         gender: "Femme",
         price: 3500,
         image: "/chaine/chaine7.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -350,6 +536,12 @@ export const productsData = [
         gender: "Femme",
         price: 3500,
         image: "/chaine/chaine7.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -361,6 +553,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme1.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -372,6 +570,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme2.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -383,6 +587,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme3.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -394,6 +604,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme4.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -405,6 +621,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme5.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -416,6 +638,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme6.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -427,6 +655,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme7.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -438,6 +672,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme8.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -449,6 +689,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme9.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -460,6 +706,12 @@ export const productsData = [
         gender: "Homme",
         price: 12000,
         image: "/montrehomme/montrehomme10.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -471,6 +723,12 @@ export const productsData = [
         gender: "Homme",
         price: 12000,
         image: "/montrehomme/montrehomme11.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -482,6 +740,12 @@ export const productsData = [
         gender: "Homme",
         price: 12000,
         image: "/montrehomme/montrehomme12.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -493,6 +757,12 @@ export const productsData = [
         gender: "Homme",
         price: 12000,
         image: "/montrehomme/montrehomme13.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -504,6 +774,12 @@ export const productsData = [
         gender: "Homme",
         price: 15000,
         image: "/montrehomme/montrehomme14.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -515,6 +791,12 @@ export const productsData = [
         gender: "Homme",
         price: 15000,
         image: "/montrehomme/montrehomme15.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -526,6 +808,12 @@ export const productsData = [
         gender: "Homme",
         price: 14000,
         image: "/montrehomme/montrehomme16.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -537,6 +825,12 @@ export const productsData = [
         gender: "Homme",
         price: 14000,
         image: "/montrehomme/montrehomme17.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -548,6 +842,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme19.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -559,6 +859,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme20.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -570,6 +876,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme21.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -581,6 +893,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme22.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -592,6 +910,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme23.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -603,6 +927,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme24.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"
@@ -614,6 +944,12 @@ export const productsData = [
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme25.jpeg",
+        images: [
+    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+  ],
         description: "",
         details: [""],
         stock: "Disponible"

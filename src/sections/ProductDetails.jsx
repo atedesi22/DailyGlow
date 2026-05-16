@@ -1,6 +1,11 @@
+import React, { useState } from 'react';
 import { ArrowLeft, MessageCircle } from 'lucide-react';
 
 export default function ProductDetails({ product, onBack, cartItems, total }) {
+
+  // Définir l'image active. Si product.images existe (tableau), on prend la première, sinon on utilise product.image
+  const imagesGallery = product.images && product.images.length > 0 ? product.images : [product.image];
+  const [activeImage, setActiveImage] = useState(product.image);
   
   // Fonction pour générer le lien WhatsApp direct pour ce produit précis
   const generateWhatsAppMessage = (cartItems, total) => {
@@ -11,7 +16,7 @@ export default function ProductDetails({ product, onBack, cartItems, total }) {
     message += `- *${product.name}*\n`;
     message += `- *Prix : ${product.price} FCFA*\n`;
     message += `- Collection : ${product.gender}\n\n`;
-    message += `Voir le produit : ${productImageUrl}\n\n`;
+    message += `Voir le produit : ${productImageUrl}\n\n`;2
     message += `Est-il toujours disponible ? Merci !`;
 
     const encodedMessage = encodeURIComponent(message);
@@ -29,13 +34,31 @@ export default function ProductDetails({ product, onBack, cartItems, total }) {
       </button>
 
       {/* Image Produit */}
-      <div className="aspect-[4/5] bg-pink-50 rounded-3xl overflow-hidden mb-8 shadow-sm">
+      {/* Zone d'affichage de l'Image Principale Active */}
+      <div className="aspect-[4/5] bg-pink-50 rounded-3xl overflow-hidden mb-4 shadow-sm">
         <img 
-          src={product.image} 
+          src={activeImage} 
           alt={product.name} 
-          className="w-full h-full object-cover transition-transform hover:scale-105 duration-700" 
+          className="w-full h-full object-cover transition-all duration-500" 
         />
       </div>
+
+      {/* Galerie de Miniatures (S'affiche uniquement s'il y a plusieurs images) */}
+      {imagesGallery.length > 1 && (
+        <div className="flex gap-3 mb-8 overflow-x-auto pb-2 no-scrollbar justify-center">
+          {imagesGallery.map((imgUrl, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveImage(imgUrl)}
+              className={`w-16 h-20 rounded-xl overflow-hidden border-2 transition-all ${
+                activeImage === imgUrl ? 'border-pink-950 scale-105 shadow-sm' : 'border-pink-100 opacity-70'
+              }`}
+            >
+              <img src={imgUrl} alt={`Vue ${index + 1}`} className="w-full h-full object-cover" />
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Infos Produit */}
       <h2 className="text-3xl font-serif text-pink-950 mb-2">{product.name}</h2>
