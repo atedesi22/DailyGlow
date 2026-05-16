@@ -12,16 +12,23 @@ export default function Cart({ isOpen, onClose, cartItems, onRemove }) {
   const generateWhatsAppMessage = (cartItems, total) => {
   const phoneNumber = "237676871669"; // Ton numéro WhatsApp au format international
   
-  let message = `Bonjour DailyGlow ! ✨\n\nJe souhaite passer une commande :\n`;
+  const siteUrl = "https://daily-glow-eta.vercel.app"; // L'URL de ton site en production
+  
+  let message = `Bonjour DailyGlow ! ✨\n\nJe souhaite passer une commande groupée :\n\n`;
   
   cartItems.forEach((item, index) => {
-    message += `${index + 1}. *${item.name}* - ${item.price} FCFA\n`;
+    // On s'assure d'avoir l'URL absolue de l'image pour que WhatsApp puisse la lire
+    const imageUrl = item.image.startsWith('http') ? item.image : `${siteUrl}${item.image}`;
+    
+    message += `*${index + 1}. ${item.name}*\n`;
+    message += ` Prix : ${item.price} FCFA\n`;
+    message += ` Aperçu : ${imageUrl}\n\n`; // Le lien qui va générer la vignette pour le livreur
   });
 
-  message += `\n*Total : ${total.toLocaleString()} FCFA*\n`;
-  message += `\nMerci de me confirmer la disponibilité et les modalités de livraison.`;
+  message += `*Total de la commande : ${total.toLocaleString()} FCFA*\n\n`;
+  message += `Merci de me confirmer la disponibilité pour lancer la livraison.`;
 
-  // Encodage pour l'URL
+  // Encodage propre pour l'URL WhatsApp
   const encodedMessage = encodeURIComponent(message);
   return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 };
