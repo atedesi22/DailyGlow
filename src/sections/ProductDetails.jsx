@@ -10,7 +10,7 @@ export default function ProductDetails({ product, onBack, cartItems, total }) {
   // Fonction pour générer le lien WhatsApp direct pour ce produit précis
   const generateWhatsAppMessage = (cartItems, total) => {
   const phoneNumber = "237676871669"; // Ton numéro WhatsApp au format international
-  const productImageUrl = `https://daily-glow-eta.vercel.app${product.image}`;
+  const productImageUrl = `https://daily-glow-eta.vercel.app${activeImage}`; // URL complète de l'image du produit
 
   let message = `Bonjour DailyGlow ! ✨\n\nJe souhaite commander cet article :\n`;
     message += `- *${product.name}*\n`;
