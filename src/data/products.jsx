@@ -7,27 +7,27 @@ export const productsData = [
         category: "Bijoux",
         image: "/baya/baya1.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
+                "/baya/baya1.jpeg",
+                "/baya/baya2.jpeg",
+                "/baya/baya3.jpeg",
+                "/baya/baya4.jpeg"
+    ],
         description: "",
         details: [""],
         stock: "Disponible"
     },
     {
         id: 2,
-        name: "Chaine de rein",
-        price: 4000,
+        name: "Chevillere",
+        price: 2500,
         gender: "Femme",
         category: "Bijoux",
-        image: "/baya/baya3.jpeg",
+        image: "/chevillere/chevillere4.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+    "/chevillere/chevillere1.jpeg",
+    "/chevillere/chevillere2.jpeg",
+    "/chevillere/chevillere3.jpeg",
+    "/chevillere/chevillere4.jpeg"
   ],
         description: "",
         details: [""],
@@ -35,16 +35,16 @@ export const productsData = [
     },
     {
         id: 3,
-        name: "Chaine de rein",
-        price: 6000,
+        name: "Colliers Mixte",
+        price: 3500,
         gender: "Femme",
         category: "Bijoux",
-        image: "/baya/baya2.jpeg",
+        image: "/chaine/chaine1.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+            "/chaine/chaine1.jpeg",
+            "/chaine/chaine2.jpeg",
+            "/chaine/chaine3.jpeg",
+            "/chaine/chaine4.jpeg"
   ],
         description: "",
         details: [""],
@@ -52,16 +52,16 @@ export const productsData = [
     },
     {
         id: 4,
-        name: "Chaine de rein",
-        price: 5000,
+        name: "Colliers Mixte",
+        price: 3500,
         gender: "Femme",
         category: "Bijoux",
-        image: "/baya/baya4.jpeg",
+        image: "/chaine/chaine5.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+            "/chaine/chaine5.jpeg",
+            "/chaine/chaine6.jpeg",
+            "/chaine/chaine7.jpeg",
+            "/chaine/chaine8.jpeg"
   ],
         description: "",
         details: [""],
@@ -69,16 +69,16 @@ export const productsData = [
     },
     {
         id: 5,
-        name: "Chevillere",
-        price: 2500,
+        name: "Colliers Mixte",
+        price: 3500,
         gender: "Femme",
         category: "Bijoux",
-        image: "/chevillere/chevillere4.jpeg",
+        image: "/chaine/chaine9.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+    "/chaine/chaine9.jpeg",
+    "/chaine/chaine10.jpeg",
+    "/chaine/chaine11.jpeg",
+    "/chaine/chaine12.jpeg"
   ],
         description: "",
         details: [""],
@@ -86,16 +86,16 @@ export const productsData = [
     },
     {
         id: 6,
-        name: "Chevillere",
-        price: 2500,
+        name: "Colliers Mixte",
+        price: 3500,
         gender: "Femme",
         category: "Bijoux",
-        image: "/chevillere/chevillere1.jpeg",
+        image: "/chaine/chaine13.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+    "/chaine/chaine13.jpeg",
+    "/chaine/chaine14.jpeg",
+    "/chaine/chaine15.jpeg",
+    "/chaine/chaine16.jpeg"
   ],
         description: "",
         details: [""],
@@ -103,16 +103,16 @@ export const productsData = [
     },
     {
         id: 7,
-        name: "Chevillere",
-        price: 2500,
+        name: "Colliers Mixte",
+        price: 3500,
         gender: "Femme",
         category: "Bijoux",
-        image: "/chevillere/chevillere6.jpeg",
+        image: "/chaine/chaine17.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+    "/chaine/chaine17.jpeg",
+    "/chaine/chaine18.jpeg",
+    "/chaine/chaine19.jpeg",
+    "/chaine/chaine20.jpeg"
   ],
         description: "",
         details: [""],
@@ -120,16 +120,16 @@ export const productsData = [
     },
     {
         id: 8,
-        name: "Chevillere",
-        price: 2500,
+        name: "Colliers Mixte",
+        price: 3500,
         gender: "Femme",
         category: "Bijoux",
-        image: "/chevillere/chevillere2.jpeg",
+        image: "/chaine/chaine21.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+    "/chaine/chaine21.jpeg",
+    "/chaine/chaine22.jpeg",
+    "/chaine/chaine23.jpeg",
+    "/chaine/chaine24.jpeg"
   ],
         description: "",
         details: [""],
@@ -137,16 +137,16 @@ export const productsData = [
     },
     {
         id: 9,
-        name: "Chevillere",
-        price: 2500,
+        name: "Colliers Mixte",
+        price: 3500,
         gender: "Femme",
         category: "Bijoux",
-        image: "/chevillere/chevillere3.jpeg",
+        image: "/chaine/chaine25.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+    "/chaine/chaine25.jpeg",
+    "/chaine/chaine26.jpeg",
+    "/chaine/chaine27.jpeg",
+    "/chaine/chaine28.jpeg"
   ],
         description: "",
         details: [""],
@@ -154,16 +154,16 @@ export const productsData = [
     },
     {
         id: 10,
-        name: "Chevillere",
-        price: 2500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chevillere/chevillere5.jpeg",
+        name: "Montre Casio",
+        category: "Montres",
+        gender: "Homme",
+        price: 10000,
+        image: "/montrehomme/montrehomme1.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+            "/montrehomme/montrehomme1.jpeg",
+            "/montrehomme/montrehomme2.jpeg",
+            "/montrehomme/montrehomme3.jpeg",
+            "/montrehomme/montrehomme4.jpeg"
   ],
         description: "",
         details: [""],
@@ -171,410 +171,16 @@ export const productsData = [
     },
     {
         id: 11,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine20.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 12,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine2.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 13,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine5.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 14,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine1.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 15,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine8.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 16,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine3.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 17,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine4.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 18,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine6.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 19,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine19.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 20,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine18.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 21,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine17.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 22,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine16.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 23,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine15.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 24,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine14.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 25,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine13.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 26,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine12.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 27,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine11.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 28,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine10.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-
-
-
-    {
-        id: 29,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine9.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 30,
-        name: "Colliers Mixte",
-        price: 3500,
-        gender: "Femme",
-        category: "Bijoux",
-        image: "/chaine/chaine8.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 31,
-        name: "Colliers Mixte",
-        category: "Bijoux",
-        gender: "Femme",
-        price: 3500,
-        image: "/chaine/chaine7.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 32,
-        name: "Colliers Mixte",
-        category: "Bijoux",
-        gender: "Femme",
-        price: 3500,
-        image: "/chaine/chaine7.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 33,
         name: "Montre Casio",
         category: "Montres",
         gender: "Homme",
         price: 10000,
-        image: "/montrehomme/montrehomme1.jpeg",
+        image: "/montrehomme/montrehomme5.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 34,
-        name: "Montre Casio",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme2.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+    "/montrehomme/montrehomme5.jpeg",
+    "/montrehomme/montrehomme6.jpeg",
+    "/montrehomme/montrehomme7.jpeg",
+    "/montrehomme/montrehomme8.jpeg"
   ],
         description: "",
         details: [""],
