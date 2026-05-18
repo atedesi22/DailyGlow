@@ -1,56 +1,130 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
+import { Sparkles, ArrowRight, ShoppingBag, Gift, Layers } from 'lucide-react';
 import InstallButton from '../components/InstallButton';
 
-export default function LandingPage({ onExplore }) {
+export default function LandingPage({ onExploreShop }) {
+
+  // Les fameux packs issus directement de ton flyer
+  const featuredPacks = [
+    { name: "Pack Élite", price: "20 000", tag: "🏆 Le Plus Prestigieux", items: ["Montre", "Gourmette", "Collier", "Boucles d'oreilles", "Foulard", "Carte de vœux"] },
+    { name: "Pack Premium", price: "15 000", tag: "✨ Exclusivité", items: ["Collier", "Boucles d'oreilles", "Manchette", "Foulard", "Bijou personnalisé", "Carte de vœux"] },
+    { name: "Pack Gold", price: "10 000", tag: "💛 Le Best-Seller", items: ["Foulard de cou", "Manchette", "Boucles d'oreilles", "Collier", "Carte de vœux"] },
+  ];
+
+
   return (
-    <div className="relative min-h-screen bg-[#FFFDFB]">
-      {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center opacity-20" />
-        <div className="relative text-center px-6 z-10">
-          <h2 className="text-pink-700 tracking-[0.3em] uppercase text-sm mb-4">Brillez chaque jour</h2>
-          <h1 className="text-5xl md:text-7xl font-serif text-pink-950 mb-8 leading-tight">
-            DailyGlow <br /> <span className="italic">Bijoux & Montres</span>
-          </h1>
+    <div className="min-h-screen bg-[#FFF0F0] text-[#2B0F1A] font-sans overflow-x-hidden">
+      
+      {/* 1. HERO SECTION (Bandeau d'accueil prestigieux) */}
+      <section className="relative pt-32 pb-20 px-6 max-w-7xl mx-auto text-center flex flex-col items-center">
+        {/* Badge d'accueil discret */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#FCD7D7] text-xs font-semibold uppercase tracking-[0.2em] text-[#C5A059] mb-6 shadow-sm">
+          <Sparkles size={12} /> Collection Fête des Mères 2026
+        </div>
+
+        {/* Titre Principal calligraphique */}
+        <h1 className="font-serif text-5xl md:text-7xl font-bold tracking-wide mb-6 leading-tight max-w-4xl text-[#2B0F1A]">
+          Offrez l'éclat que vos <br />
+          <span className="text-[#C5A059] italic font-normal">mamans méritent</span>
+        </h1>
+
+        <p className="text-sm md:text-base text-gray-600 max-w-xl mb-10 tracking-wide leading-relaxed">
+          Découvrez nos packages d'exception en édition limitée. Des pièces d'orfèvrerie uniques façonnées pour célébrer celles qui nous inspirent chaque jour.
+        </p>
+
+        {/* Boutons d'Action Principaux */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 z-10">
           <button 
-            onClick={onExplore}
-            className="border border-pink-950 text-pink-950 px-10 py-4 rounded-full hover:bg-pink-950 hover:text-white transition-all duration-500 flex items-center gap-3 mx-auto"
+            onClick={onExploreShop}
+            className="px-8 py-4 bg-[#2B0F1A] text-[#C5A059] font-bold rounded-2xl flex items-center justify-center gap-3 shadow-lg shadow-[#2B0F1A]/10 hover:bg-[#C5A059] hover:text-white transition-all duration-300 transform active:scale-95 group"
           >
-            Découvrir la Collection <ChevronRight size={18} />
+            <ShoppingBag size={18} /> 
+            Explorer la boutique 
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
           
-          {/* Bouton de téléchargement PWA */}
-          <InstallButton/>
+          {/* LOG IN NOVAVERSE - Intégré selon tes paramètres de configuration */}
+          <button 
+            onClick={() => alert("Connexion via NovaVerse indisponible en phase Seed.")}
+            className="px-8 py-4 bg-white border border-[#FCD7D7] text-[#2B0F1A] font-medium rounded-2xl flex items-center justify-center gap-3 shadow-sm hover:border-[#C5A059] hover:bg-[#FFF0F0] transition-all duration-300"
+          >
+            <Layers size={16} className="text-[#C5A059]" />
+            Se connecter avec NovaVerse
+          </button>
         </div>
       </section>
 
-      {/* Univers Masculin & Féminin */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 mb-10">
-        <div className="relative h-[400px] group cursor-pointer overflow-hidden rounded-2xl">
-          <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&q=80&w=1000" className="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
-          <div className="absolute inset-0 bg-black/30 flex items-end p-8">
-            <h3 className="text-white text-3xl font-serif italic">Univers Homme</h3>
-          </div>
+      {/* 2. SECTION PACKS SPÉCIAUX (Inspirée du Flyer) */}
+      <section className="py-16 px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold tracking-wide mb-2">
+            Nos Packages Spéciaux
+          </h2>
+          <div className="h-0.5 w-16 bg-[#C5A059] mx-auto mt-3"></div>
         </div>
-        <div className="relative h-[400px] group cursor-pointer overflow-hidden rounded-2xl">
-          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1000" className="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
-          <div className="absolute inset-0 bg-black/30 flex items-end p-8">
-            <h3 className="text-white text-3xl font-serif italic">Univers Femme</h3>
-          </div>
+
+        {/* Grille des Packs en mode cartes "Prestige" */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {featuredPacks.map((pack, index) => (
+            <div 
+              key={index} 
+              className="bg-white rounded-[2rem] border border-[#FCD7D7]/60 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
+            >
+              {/* Filigrane d'icône cadeau en arrière-plan */}
+              <Gift size={120} className="absolute -right-6 -bottom-6 text-[#FFF0F0] group-hover:scale-110 transition-transform duration-500 pointer-events-none" />
+
+              <div>
+                {/* Petit Tag du pack */}
+                <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-[#C5A059] mb-3">
+                  {pack.tag}
+                </span>
+                
+                {/* Nom et prix */}
+                <h3 className="font-serif text-2xl font-bold text-[#2B0F1A] mb-1">{pack.name}</h3>
+                <p className="text-xl font-bold text-[#2B0F1A] mb-6">
+                  {pack.price} <span className="text-xs text-[#C5A059] font-sans">FCFA</span>
+                </p>
+
+                {/* Liste des pièces incluses */}
+                <ul className="space-y-3 mb-8 border-t border-[#FFF0F0] pt-6">
+                  {pack.items.map((item, idx) => (
+                    <li key={idx} className="text-xs text-gray-600 flex items-center gap-2">
+                      <span className="text-[#C5A059]">✦</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Bouton pour commander directement le pack complet en boutique */}
+              <button 
+                onClick={onExploreShop}
+                className="w-full py-3.5 bg-[#FFF0F0] text-[#2B0F1A] rounded-xl text-xs font-bold hover:bg-[#2B0F1A] hover:text-[#C5A059] transition-all duration-300 shadow-sm"
+              >
+                Découvrir ce pack
+              </button>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Section NovaVerse Connection */}
-      <section className="bg-pink-50/50 py-20 text-center px-6 mb-20">
-        <h4 className="font-serif text-2xl mb-4">Connectée à votre écosystème</h4>
-        <p className="text-gray-500 text-sm mb-8 max-w-md mx-auto">
-          Retrouvez vos avantages et votre historique grâce à la connexion unifiée NovaVerse.
-        </p>
-        <button className="bg-black text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition">
-          Se connecter avec NovaVerse
-        </button>
-      </section>
+      {/* 3. FOOTER DES CONTACTS (Le bandeau noir du bas du flyer) */}
+      <footer className="bg-black text-white py-10 px-6 mt-20 border-t border-[#C5A059]/20 text-center md:text-left">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div>
+            <p className="text-xs uppercase tracking-widest text-[#C5A059] font-bold mb-1">📅 Clôture des commandes</p>
+            <p className="text-sm font-serif font-semibold text-gray-300">Vendredi 29 Mai 2026</p>
+            <p className="text-xs text-gray-400 mt-1">📍 Douala, Cameroun</p>
+          </div>
+          
+          {/* Réseaux sociaux et réseaux officiels */}
+          <div className="flex flex-wrap justify-center gap-6 text-xs text-gray-300">
+            <span className="hover:text-[#C5A059] transition-colors">📞 WhatsApp : +237 676 871 669</span>
+            <span className="hover:text-[#C5A059] transition-colors">🎵 TikTok : @dailyglow237</span>
+            <span className="hover:text-[#C5A059] transition-colors">📸 Instagram : @daily_glow_237</span>
+          </div>
+        </div>
+      </footer>
+
     </div>
   );
 }

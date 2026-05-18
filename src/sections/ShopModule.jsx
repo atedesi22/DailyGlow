@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { ShoppingBag, Search, Filter } from 'lucide-react';
+import { ShoppingBag, Search, Filter, Sparkles } from 'lucide-react';
 import { productsData } from '../data/products';
 
 export default function ShopModule({ onAddToCart, onViewDetails }) {
@@ -38,34 +38,46 @@ export default function ShopModule({ onAddToCart, onViewDetails }) {
   });
 
   return (
-    <div className="pt-20 px-6 max-w-7xl mx-auto min-h-screen">
+    <div className="min-h-screen bg-[#FFF0F0] pt-20 px-6 max-w-7xl mx-auto text-[#2B0F1A]">
       
-      {/* Barre de recherche interactive */}
-      <div className="max-w-md mx-auto mb-8 relative group">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-pink-600 transition-colors" size={18} />
+
+      {/* En-tête Prestige inspiré du flyer */}
+      <div className="text-center mb-10">
+        <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#2B0F1A] tracking-wide mb-2">
+          Offrez l'Éclat
+        </h1>
+        <p className="text-xs uppercase tracking-[0.3em] text-[#C5A059] font-semibold">
+          DailyGlow Luxury Collection
+        </p>
+      </div>
+
+
+      {/* Barre de recherche interactive stylisée */}
+      <div className="max-w-md mx-auto mb-8 relative">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
         <input 
           type="text"
           placeholder="Rechercher une pièce unique..."
-          className="w-full p-4 pl-12 rounded-2xl bg-white border border-pink-100 focus:border-pink-300 focus:outline-none focus:ring-4 focus:ring-pink-50/50 transition-all text-sm shadow-sm"
+          className="w-full p-4 pl-12 rounded-3xl bg-white border border-[#FCD7D7] focus:border-[#C5A059] focus:outline-none focus:ring-4 focus:ring-[#FCD7D7]/40 transition-all text-sm shadow-sm text-[#2B0F1A]"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
 
-      {/* Sélecteur de Genre */}
-      <div className="flex justify-center gap-10 mb-6">
+      {/* Sélecteur de Genre (Homme / Femme) */}
+      <div className="flex justify-center gap-12 mb-6">
         {['Homme', 'Femme'].map(g => (
           <button 
             key={g}
             onClick={() => {
               setActiveGender(g);
-              setActiveCategory("Tous"); // Reset catégorie au changement de genre
+              setActiveCategory("Tous");
               setSearchTerm("");
             }}
-            className={`text-xl font-serif pb-2 transition-all ${
+            className={`text-lg font-serif pb-2 transition-all tracking-wider ${
               activeGender === g 
-                ? 'text-pink-900 border-b-2 border-pink-900 font-bold scale-105' 
-                : 'text-gray-300 hover:text-gray-400'
+                ? 'text-[#2B0F1A] border-b-2 border-[#C5A059] font-bold scale-105' 
+                : 'text-gray-400 hover:text-gray-600'
             }`}
           >
             {g}
@@ -74,15 +86,15 @@ export default function ShopModule({ onAddToCart, onViewDetails }) {
       </div>
 
       {/* Barre de Filtre par Catégories */}
-      <div className="flex gap-3 overflow-x-auto pb-4 mb-10 no-scrollbar justify-center">
+      <div className="flex gap-3 overflow-x-auto pb-4 mb-12 no-scrollbar justify-center">
         {categories.map(cat => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-5 py-2 rounded-full text-xs font-medium whitespace-nowrap border transition-all ${
+            className={`px-6 py-2 rounded-full text-xs font-medium whitespace-nowrap border transition-all ${
               activeCategory === cat
-                ? 'bg-pink-950 text-white border-pink-950 shadow-md scale-105'
-                : 'bg-white text-gray-500 border-pink-100 hover:border-pink-200'
+                ? 'bg-[#2B0F1A] text-[#C5A059] border-[#2B0F1A] shadow-md font-bold'
+                : 'bg-white text-gray-500 border-[#FCD7D7] hover:border-[#C5A059]'
             }`}
           >
             {cat}
@@ -90,47 +102,54 @@ export default function ShopModule({ onAddToCart, onViewDetails }) {
         ))}
       </div>
 
-      {/* Grille de produits */}
+      {/* Grille de produits façon Joaillerie */}
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8 mb-20">
           {filteredProducts.map(product => (
             <div 
               key={product.id} 
-              className="bg-white p-3 rounded-2xl shadow-sm border border-pink-50 group hover:shadow-lg transition-all duration-300"
+              className="bg-white p-4 rounded-[2rem] shadow-sm border border-[#FCD7D7]/60 group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
             >
-              <div 
-                className="aspect-square bg-pink-50 rounded-xl mb-3 overflow-hidden cursor-pointer"
-                onClick={() => onViewDetails(product)}
-              >
-                <img 
-                  src={product.image} 
-                  alt={product.name} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                />
-              </div>
-              
               <div className="cursor-pointer" onClick={() => onViewDetails(product)}>
-                <h3 className="font-serif text-sm text-pink-950 truncate">{product.name}</h3>
-                <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-1">{product.category}</p>
-                <p className="text-pink-700 font-bold text-sm mb-3">{product.price} FCFA</p>
+                {/* Conteneur d'image avec coins très arrondis */}
+                <div className="aspect-square bg-[#FFF0F0] rounded-[1.5rem] mb-4 overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                  />
+                </div>
+                
+                <div className="px-1">
+                  <span className="text-[9px] uppercase tracking-widest text-[#C5A059] font-bold block mb-1">
+                    ✦ {product.category}
+                  </span>
+                  <h3 className="font-serif text-base text-[#2B0F1A] truncate mb-1 font-medium">
+                    {product.name}
+                  </h3>
+                  <p className="text-[#2B0F1A] font-bold text-sm mb-4">
+                    {product.price} <span className="text-xs font-sans text-[#C5A059]">FCFA</span>
+                  </p>
+                </div>
               </div>
 
+              {/* Bouton d'ajout épuré et chic */}
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
                   onAddToCart(product);
                 }}
-                className="w-full py-2.5 bg-pink-950 text-white rounded-xl text-xs flex items-center justify-center gap-2 hover:bg-black transition-colors active:scale-95"
+                className="w-full py-3 bg-[#2B0F1A] text-[#C5A059] rounded-2xl text-xs font-bold flex items-center justify-center gap-2 hover:bg-[#C5A059] hover:text-white transition-colors duration-300"
               >
-                <ShoppingBag size={14} /> Ajouter
+                <ShoppingBag size={14} /> Ajouter au panier
               </button>
             </div>
           ))}
         </div>
       ) : (
-        <div className="text-center py-32 bg-pink-50/30 rounded-3xl border border-dashed border-pink-200">
-          <Filter className="mx-auto mb-4 text-pink-200" size={40} />
-          <p className="text-gray-400 italic">Aucune pièce trouvée pour cette sélection.</p>
+        <div className="text-center py-24 bg-white rounded-[2rem] border border-dashed border-[#FCD7D7]">
+          <Sparkles className="mx-auto mb-4 text-[#C5A059]" size={32} />
+          <p className="text-gray-400 italic">Aucune pièce disponible pour le moment.</p>
         </div>
       )}
     </div>

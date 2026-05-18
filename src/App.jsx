@@ -20,7 +20,8 @@ export default function App() {
   // --- ÉTATS ---
   const [currentPage, setCurrentPage] = useState('landing'); 
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cart, setCart] = useState([]);
+  const [page, setPage] = useState('home'); // Gère la page active
+  const [cart, setCart] = useState([]);     // Gère ton panier existant
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   // --- LOGIQUE PANIER ---
@@ -47,93 +48,51 @@ export default function App() {
   
 
   return (
-    <div className="min-h-screen bg-[#FFFDFB] text-pink-950 font-sans pb-24 md:pb-0 selection:bg-pink-100">
+    <div className="min-h-screen bg-[#FFF0F0] text-pink-950 font-sans pb-24 md:pb-0 selection:bg-pink-100">
+      {/* 1. La Navbar est posée ici une seule fois et gère le mobile + desktop */}
+      <Navbar 
+        cartCount={cart.length} 
+        activePage={page} 
+        onChangePage={(newPage) => setPage(newPage)} 
+      />
+
+      {/* 2. Affichage conditionnel de tes pages */}
+      {page === 'home' && <LandingPage onExploreShop={() => setPage('shop')} />}
       
-      {/* Barre de navigation supérieure */}
-      <Navbar onNavigate={setCurrentPage} />
+      {page === 'shop' && (
+  <ShopModule 
+    onAddToCart={(product) => setCart([...cart, product])} 
+    onViewDetails={(product) => {
+      setSelectedProduct(product); // On mémorise le produit cliqué
+      setPage('details');          // On change la page vers 'details'
+    }} 
+  />
+)}
 
-      {/* Zone de contenu principale */}
-      <main className="transition-all duration-300">
-        {currentPage === 'landing' && (
-          <>
-            <LandingPage onExplore={() => setCurrentPage('shop')} />
-            <PartnerSlider />
-          </>
-        )}
+{/* --- AJOUTE OU VÉRIFIE CE BLOC ICI --- */}
+{page === 'details' && (
+  <ProductDetails 
+    product={selectedProduct} 
+    onBack={() => setPage('shop')} 
+  />
+)}
+      
+      {page === 'cart' && (
+        <Cart 
+          cart={cart} 
+          onRemoveFromCart={(index) => setCart(cart.filter((_, i) => i !== index))}
+          onBackToShop={() => setPage('shop')} 
+        />
+      )}
 
-        {currentPage === 'shop' && (
-          <>
-            <ShopModule 
-              onAddToCart={addToCart} 
-              onViewDetails={handleViewDetails} 
-            />
-            <div className="border-t border-pink-50/50 mt-12 pt-12">
-               <PartnerSlider />
-            </div>
-          </>
-        )}
+      {page === 'contact' && <Contact />}
 
-        {currentPage === 'details' && selectedProduct && (
-          <ProductDetails 
-            product={selectedProduct} 
-            onBack={() => setCurrentPage('shop')} 
-            onAddToCart={addToCart}
-          />
-        )}
-
-        {currentPage === 'contact' && <Contact />}
-
-        {currentPage === 'profile' && (
-          <UserProfile onNavigate={setCurrentPage} />
-        )}
-
-        {currentPage === 'admin' && (
-          <AdminDashboard onBack={() => setCurrentPage('profile')} />
-        )}
-
-        {currentPage === 'user-dashboard' && (
-          <UserDashboard onBack={() => setCurrentPage('profile')} />
-        )}
-
-        {currentPage === 'faq' && <Faq />}
-      </main>
-
-      {/* Overlay du Panier (WhatsApp Ready) */}
-      <Cart 
-        isOpen={isCartOpen} 
-        onClose={() => setIsCartOpen(false)} 
-        cartItems={cart} 
-        onRemove={removeFromCart}
-      />
-
-      {/* Navigation Mobile (Sans lien admin direct pour plus de pureté) */}
-      <MobileNavbar 
-        onNavigate={setCurrentPage} 
-        cartCount={cart.length}
-        activePage={currentPage}
-      />
-
-      {/* Overlay du Panier */}
-      <Cart 
-        isOpen={isCartOpen} 
-        onClose={() => setIsCartOpen(false)} 
-        cartItems={cart} 
-        onRemove={removeFromCart}
-      />
-
-      {/* Barre de navigation mobile fixée en bas */}
-      <MobileNavbar 
-        onNavigate={setCurrentPage} 
-        cartCount={cart.length}
-        activePage={currentPage}
-      />
-
-      {/* Footer (Desktop uniquement) */}
+      {/* Footer (Desktop uniquement)
       <footer className="hidden md:block py-16 text-center border-t border-pink-50 mt-20">
         <p className="text-[10px] text-gray-400 tracking-[0.3em] uppercase">
           DailyGlow — Excellence & Prestige
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 }
