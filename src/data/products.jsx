@@ -187,374 +187,81 @@ export const productsData = [
         stock: "Disponible"
     },
     {
-        id: 35,
-        name: "Montre Casio",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme3.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 36,
-        name: "Montre Casio",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme4.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 37,
-        name: "Montre Casio",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme5.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 38,
-        name: "Montre Casio",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme6.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 39,
-        name: "Montre Casio",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme7.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 40,
-        name: "Montre Casio",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme8.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 41,
-        name: "Montre Casio",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme9.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 42,
+        id: 12,
         name: "Montre BOSS",
         category: "Montres",
         gender: "Homme",
         price: 12000,
         image: "/montrehomme/montrehomme10.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+            "/montrehomme/montrehomme10.jpeg",
+            "/montrehomme/montrehomme11.jpeg",
+            "/montrehomme/montrehomme12.jpeg",
+            "/montrehomme/montrehomme13.jpeg"
   ],
         description: "",
         details: [""],
         stock: "Disponible"
     },
     {
-        id: 43,
-        name: "Montre BOSS",
-        category: "Montres",
-        gender: "Homme",
-        price: 12000,
-        image: "/montrehomme/montrehomme11.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 44,
-        name: "Montre BOSS",
-        category: "Montres",
-        gender: "Homme",
-        price: 12000,
-        image: "/montrehomme/montrehomme12.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 45,
-        name: "Montre BOSS",
-        category: "Montres",
-        gender: "Homme",
-        price: 12000,
-        image: "/montrehomme/montrehomme13.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 46,
+        id: 13,
         name: "Montre EMPORIO ARMANI",
         category: "Montres",
         gender: "Homme",
         price: 15000,
         image: "/montrehomme/montrehomme14.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+    "/montrehomme/montrehomme14.jpeg",
+    "/montrehomme/montrehomme15.jpeg",
   ],
         description: "",
         details: [""],
         stock: "Disponible"
     },
     {
-        id: 47,
-        name: "Montre EMPORIO ARMANI",
-        category: "Montres",
-        gender: "Homme",
-        price: 15000,
-        image: "/montrehomme/montrehomme15.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 48,
+        id: 14,
         name: "Montre TISSOT",
         category: "Montres",
         gender: "Homme",
         price: 14000,
         image: "/montrehomme/montrehomme16.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+    "/montrehomme/montrehomme16.jpeg",
+    "/montrehomme/montrehomme17.jpeg",
   ],
         description: "",
         details: [""],
         stock: "Disponible"
     },
     {
-        id: 49,
-        name: "Montre TISSOT",
-        category: "Montres",
-        gender: "Homme",
-        price: 14000,
-        image: "/montrehomme/montrehomme17.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 50,
+        id: 15,
         name: "Montre Rolex",
         category: "Montres",
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme19.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+    "/montrehomme/montrehomme19.jpeg",
+    "/montrehomme/montrehomme20.jpeg",
+    "/montrehomme/montrehomme21.jpeg",
+    "/montrehomme/montrehomme22.jpeg"
   ],
         description: "",
         details: [""],
         stock: "Disponible"
     },
     {
-        id: 51,
-        name: "Montre Rolex",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme20.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 52,
-        name: "Montre Rolex",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme21.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 53,
-        name: "Montre Rolex",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme22.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 54,
+        id: 16,
         name: "Montre Rolex",
         category: "Montres",
         gender: "Homme",
         price: 10000,
         image: "/montrehomme/montrehomme23.jpeg",
         images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 55,
-        name: "Montre Rolex",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme24.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
-  ],
-        description: "",
-        details: [""],
-        stock: "Disponible"
-    },
-    {
-        id: 56,
-        name: "Montre Rolex",
-        category: "Montres",
-        gender: "Homme",
-        price: 10000,
-        image: "/montrehomme/montrehomme25.jpeg",
-        images: [
-    "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&q=80&w=800"
+    "/montrehomme/montrehomme23.jpeg",
+    "/montrehomme/montrehomme24.jpeg",
+    "/montrehomme/montrehomme25.jpeg",
+    "/montrehomme/montrehomme26.jpeg"
   ],
         description: "",
         details: [""],
