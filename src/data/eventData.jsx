@@ -9,7 +9,7 @@ export const eventData = {
       name: "Pack Élite",
       price: "20 000",
       description: "Le summum de l'élégance pour une maman d'exception.",
-      image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=800",
+      image: "/packs/pack1.JPG",
       items: ["Montre Chrono", "Gourmette Fine", "Collier", "Boucles", "Foulard", "Carte"]
     },
     {
@@ -18,7 +18,7 @@ export const eventData = {
       name: "Pack Premium",
       price: "15 000",
       description: "L'équilibre parfait entre prestige et douceur.",
-      image: "https://images.unsplash.com/photo-1589674391629-3733075d9e50?q=80&w=800",
+      image: "/packs/pack2.JPG",
       items: ["Collier", "Boucles", "Manchette", "Foulard", "Bijou", "Carte"]
     },
     {
@@ -27,7 +27,7 @@ export const eventData = {
       name: "Pack Gold",
       price: "10 000",
       description: "L'essentiel du luxe pour faire briller sa journée.",
-      image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800",
+      image: "/packs/pack3.JPG",
       items: ["Foulard de cou", "Manchette", "Boucles", "Collier", "Carte"]
     },
     {
@@ -36,7 +36,7 @@ export const eventData = {
       name: "Pack Essential",
       price: "5 000",
       description: "Le choix raffiné pour une maman aimante.",
-      image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800",
+      image: "/packs/pack4.JPG",
       items: ["Boucles", "Collier", "Carte"]
     }
   ]

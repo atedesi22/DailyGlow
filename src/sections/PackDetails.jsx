@@ -5,7 +5,10 @@ export default function PackDetails({ pack, onBack }) {
   if (!pack) return null;
 
   const whatsappLink = `https://wa.me/237676871669?text=${encodeURIComponent(
-    `Bonjour DailyGlow, je souhaite réserver le ${pack.name} (${pack.price} FCFA).`
+    `Bonjour DailyGlow ! ✨\n\n` +
+  `Je souhaite réserver le *${pack.name}* (${pack.price} FCFA).\n\n` +
+  `Voici le modèle que je regarde :\n${pack.image}\n\n` +
+  `Est-il disponible pour une livraison ?`
   )}`;
 
   return (
