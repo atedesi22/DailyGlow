@@ -89,14 +89,9 @@ export default function LandingPage({ onViewPack, packs, onExploreShop }) {
               <div>
                 <span className="text-[10px] font-bold uppercase text-[#C5A059]">{pack.tag}</span>
                 <h3 className="text-2xl font-bold font-serif mt-2">{pack.name}</h3>
-                <ul className="grid grid-cols-1 gap-3 mb-10">
-                {pack.items.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-sm bg-[#FFF0F0]/50 p-3 rounded-xl border border-[#FCD7D7]/30">
-                    <span className="text-[#C5A059]">✦</span>
-                    {/* <span className="font-medium">{item.label}</span> */}
-                  </li>
-                ))}
-              </ul>
+                <ul className="mb-6 space-y-2">
+              {pack.items.map((item, i) => <li key={i} className="flex items-center gap-2 text-[#C5A059]">✦ <span className=' font-black text-black'>{item}</span></li>)}
+            </ul>
                 <p className="text-xl font-bold text-[#C5A059] mb-4">{pack.price} FCFA</p>
               </div>
               
