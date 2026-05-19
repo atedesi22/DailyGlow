@@ -5,6 +5,7 @@ export const eventData = {
   packs: [
     {
       id: "elite",
+      tag: "🏆 Le Plus Prestigieux",
       name: "Pack Élite",
       price: "20 000",
       description: "Le summum de l'élégance pour une maman d'exception.",
@@ -13,6 +14,7 @@ export const eventData = {
     },
     {
       id: "premium",
+      tag: "✨ Exclusivité",
       name: "Pack Premium",
       price: "15 000",
       description: "L'équilibre parfait entre prestige et douceur.",
@@ -21,6 +23,7 @@ export const eventData = {
     },
     {
       id: "gold",
+      tag: "💛 Le Best-Seller",
       name: "Pack Gold",
       price: "10 000",
       description: "L'essentiel du luxe pour faire briller sa journée.",
@@ -29,6 +32,7 @@ export const eventData = {
     },
     {
       id: "essential",
+      tag: "🌱 L'Essentiel",
       name: "Pack Essential",
       price: "5 000",
       description: "Le choix raffiné pour une maman aimante.",

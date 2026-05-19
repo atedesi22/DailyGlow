@@ -84,17 +84,60 @@ export default function LandingPage({ onViewPack, packs, onExploreShop }) {
 
         {/* Grille des Packs */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {packs.map((pack) => (
-    <div key={pack.id} className="bg-white rounded-[2rem] p-8 shadow-sm border border-[#FCD7D7] flex flex-col justify-between">
-              <div>
-                <span className="text-[10px] font-bold uppercase text-[#C5A059]">{pack.tag}</span>
-                <h3 className="text-2xl font-bold font-serif mt-2">{pack.name}</h3>
-                <ul className="mb-6 space-y-2">
-              {pack.items.map((item, i) => <li key={i} className="flex items-center gap-2 text-[#C5A059]">✦ <span className=' font-black text-black'>{item}</span></li>)}
-            </ul>
-                <p className="text-xl font-bold text-[#C5A059] mb-4">{pack.price} FCFA</p>
-              </div>
+          
+          {packs.map((pack, index) => (
+    // <div key={pack.id} className="bg-white rounded-[2rem] p-8 shadow-sm border border-[#FCD7D7] flex flex-col justify-between">
+
+    //   {/* Image du Pack */}
+    //       <div className="relative h-[400px] md:h-full">
+    //         <img src={pack.image} alt={pack.name} className="w-full h-full object-cover" />
+    //         <div className="absolute top-6 left-6 bg-[#2B0F1A] text-[#C5A059] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg">
+    //           Édition Limitée
+    //         </div>
+    //       </div>
+    //           <div>
+    //             <span className="text-[10px] font-bold uppercase text-[#C5A059]">{pack.tag}</span>
+    //             <h3 className="text-2xl font-bold font-serif mt-2">{pack.name}</h3>
+    //             <ul className="mb-6 space-y-2">
+    //           {pack.items.map((item, i) => <li key={i} className="flex items-center gap-2 text-[#C5A059]">✦ <span className=' text-black'>{item}</span></li>)}
+    //         </ul>
+    //             <p className="text-xl font-bold text-[#C5A059] mb-4">{pack.price} FCFA</p>
+    //           </div>
               
+              // {/* C'est ici le changement : On appelle onViewPack(pack) */}
+              // <button 
+              //   onClick={() => onViewPack(pack)} 
+              //   className="w-full py-4 bg-[#FFF0F0] text-[#2B0F1A] rounded-xl text-xs font-bold hover:bg-[#2B0F1A] hover:text-[#C5A059] transition-all"
+              // >
+              //   Découvrir ce pack
+              // </button>
+    //         </div>
+
+    <div 
+              key={index} 
+              className="bg-white rounded-[2.5rem] border border-[#FCD7D7]/60 p-8 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
+            >
+              <Gift size={120} className="absolute -right-6 -bottom-6 text-[#FFF0F0] group-hover:scale-110 transition-transform duration-500 pointer-events-none" />
+
+              <div>
+                <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-[#C5A059] mb-3">
+                  {pack.tag}
+                </span>
+                
+                <h3 className="font-serif text-2xl font-bold text-[#2B0F1A] mb-1">{pack.name}</h3>
+                <p className="text-xl font-bold text-[#2B0F1A] mb-6">
+                  {pack.price} <span className="text-xs text-[#C5A059] font-sans">FCFA</span>
+                </p>
+
+                <ul className="space-y-3 mb-8 border-t border-[#FFF0F0] pt-6">
+                  {pack.items.map((item, idx) => (
+                    <li key={idx} className="text-xs text-gray-600 flex items-center gap-2">
+                      <span className="text-[#C5A059]">✦</span> {item}
+                    </li>
+                    ))}
+                </ul>
+              </div>
+
               {/* C'est ici le changement : On appelle onViewPack(pack) */}
               <button 
                 onClick={() => onViewPack(pack)} 
