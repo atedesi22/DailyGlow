@@ -1,14 +1,15 @@
 import React from 'react';
 import { Sparkles, ArrowRight, ShoppingBag, Gift, Layers } from 'lucide-react';
+import PackDetails from './PackDetails';
 
-export default function LandingPage({ onExploreShop }) {
+export default function LandingPage({ onViewPack, onExploreShop }) {
   
   // Les packages issus de ton flyer
   const featuredPacks = [
-    { name: "Pack Élite", price: "20 000", tag: "🏆 Le Plus Prestigieux", items: ["Montre", "Gourmette", "Collier", "Boucles d'oreilles", "Foulard", "Carte de vœux"] },
-    { name: "Pack Premium", price: "15 000", tag: "✨ Exclusivité", items: ["Collier", "Boucles d'oreilles", "Manchette", "Foulard", "Bijou personnalisé", "Carte de vœux"] },
-    { name: "Pack Gold", price: "10 000", tag: "💛 Le Best-Seller", items: ["Foulard de cou", "Manchette", "Boucles d'oreilles", "Collier", "Carte de vœux"] },
-  ];
+  { id: 1, name: "Pack Élite", price: "20 000", tag: "🏆 Le Plus Prestigieux", description: "Le summum de l'élégance.", items: ["Montre", "Gourmette", "Collier", "Boucles d'oreilles", "Foulard", "Carte"] },
+  { id: 2, name: "Pack Premium", price: "15 000", tag: "✨ Exclusivité", description: "Le raffinement discret.", items: ["Collier", "Boucles d'oreilles", "Manchette", "Foulard", "Bijou", "Carte"] },
+  { id: 3, name: "Pack Gold", price: "10 000", tag: "💛 Le Best-Seller", description: "L'essentiel du luxe.", items: ["Foulard", "Manchette", "Boucles", "Collier", "Carte"] },
+];
 
   return (
     <div className="min-h-screen bg-[#FFF0F0] text-[#2B0F1A] font-sans overflow-x-hidden">
@@ -109,7 +110,7 @@ export default function LandingPage({ onExploreShop }) {
               </div>
 
               <button 
-                onClick={onExploreShop}
+                onClick={() => onViewPack(pack)}
                 className="w-full py-4 bg-[#FFF0F0] text-[#2B0F1A] rounded-2xl text-xs font-bold hover:bg-[#2B0F1A] hover:text-[#C5A059] transition-all duration-300 shadow-sm z-10"
               >
                 Découvrir ce pack

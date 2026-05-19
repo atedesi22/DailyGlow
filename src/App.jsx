@@ -6,6 +6,10 @@ import ShopModule from './sections/ShopModule';
 import ProductDetails from './sections/ProductDetails';
 import Contact from './sections/Contact';
 import Faq from './sections/Faq';
+// import Testimonials from './sections/Testimonials';
+// import Newsletter from './sections/Newsletter';
+import PackDetails from './sections/PackDetails';
+
 
 // Composants Globaux
 import Navbar from './components/Navbar';
@@ -57,8 +61,23 @@ export default function App() {
       />
 
       {/* 2. Affichage conditionnel de tes pages */}
-      {page === 'home' && <LandingPage onExploreShop={() => setPage('shop')} />}
-      
+      {/* // Dans ton App.jsx */}
+{page === 'home' && (
+      <LandingPage 
+        onExploreShop={() => setPage('shop')} 
+        onViewPack={(lePackClique) => {
+          setSelectedProduct(lePackClique); // Utilise setSelectedProduct pour uniformiser
+          setPage('pack-details');
+        }}
+      />
+    )}
+
+    {page === 'pack-details' && (
+      <PackDetails 
+        pack={selectedProduct} 
+        onBack={() => setPage('home')} 
+      />
+    )}   
       {page === 'shop' && (
   <ShopModule 
     onAddToCart={(product) => setCart([...cart, product])} 
@@ -68,6 +87,8 @@ export default function App() {
     }} 
   />
 )}
+
+
 
 {/* --- AJOUTE OU VÉRIFIE CE BLOC ICI --- */}
 {page === 'details' && (
