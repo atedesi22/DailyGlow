@@ -1,7 +1,39 @@
-import React from 'react';
-import { Phone, Clock, MapPin, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { Phone, Clock, MapPin, Sparkles, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
+  // États pour récupérer les entrées du formulaire
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmitWhatsApp = (e) => {
+    e.preventDefault();
+
+    // Validation rapide pour s'assurer que les champs ne sont pas vides
+    if (!name || !message) {
+      alert("Veuillez remplir au moins votre nom et votre message.");
+      return;
+    }
+
+    const phoneNumber = "237676871669"; // Ton numéro WhatsApp DailyGlow
+
+    // Construction du message texte clair pour toi ou tes gestionnaires
+    let text = `Bonjour DailyGlow ! ✨\n`;
+    text += `Un client vous a laissé un message depuis le formulaire de contact :\n\n`;
+    text += `- *Nom* : ${name}\n`;
+    if (phone) text += `- *Téléphone/WhatsApp* : ${phone}\n`;
+    text += `\n*Message* :\n"${message}"`;
+
+    // Encodage propre de l'URL
+    const encodedMessage = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Redirection automatique vers l'application WhatsApp
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  };
+
+
   return (
     <div className="min-h-screen bg-[#FFF0F0] pt-28 px-6 pb-20 text-[#2B0F1A]">
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -50,18 +82,38 @@ export default function Contact() {
         {/* Formulaire stylisé */}
         <div className="bg-white rounded-[2rem] p-6 md:p-8 border border-[#FCD7D7]/60 shadow-md">
           <h3 className="font-serif text-lg font-bold mb-6">Écrivez-nous</h3>
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-4" onSubmit={handleSubmitWhatsApp}>
             <div>
               <label className="block text-[11px] uppercase tracking-wider font-bold mb-2 text-gray-400">Nom complet</label>
-              <input type="text" className="w-full p-3 rounded-xl bg-[#FFF0F0]/50 border border-[#FCD7D7] text-sm focus:outline-none focus:border-[#C5A059]" placeholder="Ex: Paul Emmanuel" />
+              <input 
+                type="text" 
+                className="w-full p-3 rounded-xl bg-[#FFF0F0]/50 border border-[#FCD7D7] text-sm focus:outline-none focus:border-[#C5A059] text-[#2B0F1A]" 
+                placeholder="Ex: Paul Emmanuel"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
             </div>
             <div>
-              <label className="block text-[11px] uppercase tracking-wider font-bold mb-2 text-gray-400">Numéro WhatsApp</label>
-              <input type="tel" className="w-full p-3 rounded-xl bg-[#FFF0F0]/50 border border-[#FCD7D7] text-sm focus:outline-none focus:border-[#C5A059]" placeholder="Ex: 676871669" />
+              <label className="block text-[11px] uppercase tracking-wider font-bold mb-2 text-gray-400">Numéro WhatsApp (Optionnel)</label>
+              <input 
+                type="tel" 
+                className="w-full p-3 rounded-xl bg-[#FFF0F0]/50 border border-[#FCD7D7] text-sm focus:outline-none focus:border-[#C5A059] text-[#2B0F1A]" 
+                placeholder="Ex: 676871669" 
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
             </div>
             <div>
               <label className="block text-[11px] uppercase tracking-wider font-bold mb-2 text-gray-400">Votre Message</label>
-              <textarea rows="4" className="w-full p-3 rounded-xl bg-[#FFF0F0]/50 border border-[#FCD7D7] text-sm focus:outline-none focus:border-[#C5A059]" placeholder="Quelle pièce attire votre attention ?"></textarea>
+              <textarea 
+                rows="4" 
+                className="w-full p-3 rounded-xl bg-[#FFF0F0]/50 border border-[#FCD7D7] text-sm focus:outline-none focus:border-[#C5A059] text-[#2B0F1A]" 
+                placeholder="Posez votre question ici..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              ></textarea>
             </div>
             <button type="submit" className="w-full py-3.5 bg-[#2B0F1A] text-[#C5A059] rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-[#C5A059] hover:text-white transition-colors duration-300">
               Envoyer la demande
