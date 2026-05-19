@@ -3,11 +3,13 @@ import { ArrowLeft, MessageCircle, Gift } from 'lucide-react';
 
 export default function PackDetails({ pack, onBack }) {
   if (!pack) return null;
+  const siteUrl = "https://daily-glow-eta.vercel.app";
+const imageUrl = pack.image.startsWith('http') ? pack.image : `${siteUrl}${pack.image}`;
 
   const whatsappLink = `https://wa.me/237676871669?text=${encodeURIComponent(
     `Bonjour DailyGlow ! ✨\n\n` +
   `Je souhaite réserver le *${pack.name}* (${pack.price} FCFA).\n\n` +
-  `Voici le modèle que je regarde :\n${pack.image}\n\n` +
+  `Voici le modèle que je regarde :\n${imageUrl}\n\n` +
   `Est-il disponible pour une livraison ?`
   )}`;
 
