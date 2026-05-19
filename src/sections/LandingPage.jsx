@@ -17,6 +17,23 @@ export default function LandingPage({ onExploreShop }) {
       
       {/* 1. HERO SECTION (Bandeau d'accueil prestigieux) */}
       <section className="relative pt-32 pb-20 px-6 max-w-7xl mx-auto text-center flex flex-col items-center">
+        
+        {/* L'image de fond "Prestige" avec overlays de transition */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=1920&auto=format&fit=crop" 
+            alt="Luxury Gold Jewellery Background" 
+            className="w-full h-full object-cover object-center transform scale-105 animate-pulse duration-[300ms]"
+          />
+          {/* Couche 1 : Filtre rose poudré translucide pour respecter la charte */}
+          <div className="absolute inset-0 bg-[#FFF0F0]/75 mix-blend-multiply" />
+          {/* Couche 2 : Dégradé fluide pour estomper l'image vers le bas et le haut */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FFF0F0]/50 via-transparent to-[#FFF0F0]" />
+        </div>
+
+        {/* CONTENU (Positionné au-dessus de l'image grâce au z-10) */}
+        <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center"></div>
+        
         {/* Badge d'accueil discret */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#FCD7D7] text-xs font-semibold uppercase tracking-[0.2em] text-[#C5A059] mb-6 shadow-sm">
           <Sparkles size={12} /> Collection Fête des Mères 2026
