@@ -19,6 +19,7 @@ import AdminDashboard from './components/AdminDashboard';
 import UserDashboard from './components/UserDashboard';
 import PartnerSlider from './components/PartnerSlider';
 import Cart from './components/Cart';
+import { eventData } from './data/eventData'; // Import de la source
 
 export default function App() {
   // --- ÉTATS ---
@@ -49,6 +50,9 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [currentPage]);
 
+  // const [page, setPage] = useState('home');
+  const [selectedPack, setSelectedPack] = useState(null);
+
   
 
   return (
@@ -63,21 +67,22 @@ export default function App() {
       {/* 2. Affichage conditionnel de tes pages */}
       {/* // Dans ton App.jsx */}
 {page === 'home' && (
-      <LandingPage 
-        onExploreShop={() => setPage('shop')} 
-        onViewPack={(lePackClique) => {
-          setSelectedProduct(lePackClique); // Utilise setSelectedProduct pour uniformiser
-          setPage('pack-details');
-        }}
-      />
-    )}
+    <LandingPage 
+      packs={eventData.packs} // On envoie les packs ici
+      onViewPack={(pack) => {
+        setSelectedPack(pack);
+        setPage('pack-details');
+      }} 
+    />
+  )}
 
-    {page === 'pack-details' && (
-      <PackDetails 
-        pack={selectedProduct} 
-        onBack={() => setPage('home')} 
-      />
-    )}   
+{page === 'pack-details' && (
+    <PackDetails 
+      pack={selectedPack} 
+      onBack={() => setPage('home')} 
+    />
+  )}
+
       {page === 'shop' && (
   <ShopModule 
     onAddToCart={(product) => setCart([...cart, product])} 

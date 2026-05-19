@@ -2,7 +2,8 @@ import React from 'react';
 import { Sparkles, ArrowRight, ShoppingBag, Gift, Layers } from 'lucide-react';
 import PackDetails from './PackDetails';
 
-export default function LandingPage({ onViewPack, onExploreShop }) {
+export default function LandingPage({ onViewPack, packs, onExploreShop }) {
+  
   
   // Les packages issus de ton flyer
   const featuredPacks = [
@@ -83,42 +84,35 @@ export default function LandingPage({ onViewPack, onExploreShop }) {
 
         {/* Grille des Packs */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featuredPacks.map((pack, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-[2.5rem] border border-[#FCD7D7]/60 p-8 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
-            >
-              <Gift size={120} className="absolute -right-6 -bottom-6 text-[#FFF0F0] group-hover:scale-110 transition-transform duration-500 pointer-events-none" />
-
+          {packs.map((pack) => (
+    <div key={pack.id} className="bg-white rounded-[2rem] p-8 shadow-sm border border-[#FCD7D7] flex flex-col justify-between">
               <div>
-                <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-[#C5A059] mb-3">
-                  {pack.tag}
-                </span>
-                
-                <h3 className="font-serif text-2xl font-bold text-[#2B0F1A] mb-1">{pack.name}</h3>
-                <p className="text-xl font-bold text-[#2B0F1A] mb-6">
-                  {pack.price} <span className="text-xs text-[#C5A059] font-sans">FCFA</span>
-                </p>
-
-                <ul className="space-y-3 mb-8 border-t border-[#FFF0F0] pt-6">
-                  {pack.items.map((item, idx) => (
-                    <li key={idx} className="text-xs text-gray-600 flex items-center gap-2">
-                      <span className="text-[#C5A059]">✦</span> {item}
-                    </li>
-                  ))}
-                </ul>
+                <span className="text-[10px] font-bold uppercase text-[#C5A059]">{pack.tag}</span>
+                <h3 className="text-2xl font-bold font-serif mt-2">{pack.name}</h3>
+                <ul className="grid grid-cols-1 gap-3 mb-10">
+                {pack.items.map((item, idx) => (
+                  <li key={idx} className="flex items-center gap-3 text-sm bg-[#FFF0F0]/50 p-3 rounded-xl border border-[#FCD7D7]/30">
+                    <span className="text-[#C5A059]">✦</span>
+                    {/* <span className="font-medium">{item.label}</span> */}
+                  </li>
+                ))}
+              </ul>
+                <p className="text-xl font-bold text-[#C5A059] mb-4">{pack.price} FCFA</p>
               </div>
-
+              
+              {/* C'est ici le changement : On appelle onViewPack(pack) */}
               <button 
-                onClick={() => onViewPack(pack)}
-                className="w-full py-4 bg-[#FFF0F0] text-[#2B0F1A] rounded-2xl text-xs font-bold hover:bg-[#2B0F1A] hover:text-[#C5A059] transition-all duration-300 shadow-sm z-10"
+                onClick={() => onViewPack(pack)} 
+                className="w-full py-4 bg-[#FFF0F0] text-[#2B0F1A] rounded-xl text-xs font-bold hover:bg-[#2B0F1A] hover:text-[#C5A059] transition-all"
               >
                 Découvrir ce pack
               </button>
             </div>
-          ))}
+  ))}
         </div>
       </section>
+
+      
 
       {/* 3. FOOTER DES CONTACTS (Bandeau sombre du flyer) */}
       <footer className="bg-black text-white py-12 px-6 mt-20 border-t border-[#C5A059]/20 text-center md:text-left relative z-10">
