@@ -20,6 +20,7 @@ import UserDashboard from './components/UserDashboard';
 import PartnerSlider from './components/PartnerSlider';
 import Cart from './components/Cart';
 import { eventData } from './data/eventData'; // Import de la source
+import { CartProvider } from './context/CartContext';
 
 export default function App() {
   // --- ÉTATS ---
@@ -56,69 +57,74 @@ export default function App() {
   
 
   return (
-    <div className="min-h-screen bg-[#FFF0F0] text-pink-950 font-sans pb-24 md:pb-0 selection:bg-pink-100">
-      {/* 1. La Navbar est posée ici une seule fois et gère le mobile + desktop */}
-      <Navbar 
-        cartCount={cart.length} 
-        activePage={page} 
-        onChangePage={(newPage) => setPage(newPage)} 
-      />
 
-      {/* 2. Affichage conditionnel de tes pages */}
-      {/* // Dans ton App.jsx */}
-{page === 'home' && (
-    <LandingPage 
-      packs={eventData.packs} // On envoie les packs ici
-      onViewPack={(pack) => {
-        setSelectedPack(pack);
-        setPage('pack-details');
+    <CartProvider>
+
+        <div className="min-h-screen bg-[#FFF0F0] text-pink-950 font-sans pb-24 md:pb-0 selection:bg-pink-100">
+        {/* 1. La Navbar est posée ici une seule fois et gère le mobile + desktop */}
+        <Navbar 
+          cartCount={cart.length} 
+          activePage={page} 
+          onChangePage={(newPage) => setPage(newPage)} 
+        />
+
+        {/* 2. Affichage conditionnel de tes pages */}
+        {/* // Dans ton App.jsx */}
+        {page === 'home' && (
+            <LandingPage 
+              packs={eventData.packs} // On envoie les packs ici
+              onViewPack={(pack) => {
+                setSelectedPack(pack);
+                setPage('pack-details');
+              }} 
+            />
+          )}
+
+        {page === 'pack-details' && (
+            <PackDetails 
+              pack={selectedPack} 
+              onBack={() => setPage('home')} 
+            />
+          )}
+
+        {page === 'shop' && (
+    <ShopModule 
+      onAddToCart={(product) => setCart([...cart, product])} 
+      onViewDetails={(product) => {
+        setSelectedProduct(product); // On mémorise le produit cliqué
+        setPage('details');          // On change la page vers 'details'
       }} 
     />
-  )}
-
-{page === 'pack-details' && (
-    <PackDetails 
-      pack={selectedPack} 
-      onBack={() => setPage('home')} 
-    />
-  )}
-
-      {page === 'shop' && (
-  <ShopModule 
-    onAddToCart={(product) => setCart([...cart, product])} 
-    onViewDetails={(product) => {
-      setSelectedProduct(product); // On mémorise le produit cliqué
-      setPage('details');          // On change la page vers 'details'
-    }} 
-  />
-)}
+          )}
 
 
 
-{/* --- AJOUTE OU VÉRIFIE CE BLOC ICI --- */}
-{page === 'details' && (
-  <ProductDetails 
-    product={selectedProduct} 
-    onBack={() => setPage('shop')} 
-  />
-)}
-      
-      {page === 'cart' && (
-        <Cart 
-          cart={cart} 
-          onRemoveFromCart={(index) => setCart(cart.filter((_, i) => i !== index))}
-          onBackToShop={() => setPage('shop')} 
-        />
-      )}
+        {/* --- AJOUTE OU VÉRIFIE CE BLOC ICI --- */}
+        {page === 'details' && (
+          <ProductDetails 
+            product={selectedProduct} 
+            onBack={() => setPage('shop')} 
+          />
+        )}
+        
+        {page === 'cart' && (
+          <Cart 
+            cart={cart} 
+            onRemoveFromCart={(index) => setCart(cart.filter((_, i) => i !== index))}
+            onBackToShop={() => setPage('shop')} 
+          />
+        )}
 
-      {page === 'contact' && <Contact />}
+        {page === 'contact' && <Contact />}
 
-      {/* Footer (Desktop uniquement)
-      <footer className="hidden md:block py-16 text-center border-t border-pink-50 mt-20">
-        <p className="text-[10px] text-gray-400 tracking-[0.3em] uppercase">
-          DailyGlow — Excellence & Prestige
-        </p>
-      </footer> */}
-    </div>
+        {/* Footer (Desktop uniquement)
+        <footer className="hidden md:block py-16 text-center border-t border-pink-50 mt-20">
+          <p className="text-[10px] text-gray-400 tracking-[0.3em] uppercase">
+            DailyGlow — Excellence & Prestige
+          </p>
+        </footer> */}
+      </div>
+    </CartProvider>
+    
   );
 }
