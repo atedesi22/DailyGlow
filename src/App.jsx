@@ -14,12 +14,14 @@ import Cart from './components/Cart';
 // Données & Contexte
 import { eventData } from './data/eventData';
 import { useCart } from './context/CartContext'; 
+import Preloader from './components/Preloader';
 
 export default function App() {
   // --- ÉTATS DE NAVIGATION ---
   const [page, setPage] = useState('home');
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [selectedPack, setSelectedPack] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   // --- CONTEXTE PANIER ---
   // On récupère uniquement ce dont on a besoin depuis le contexte
@@ -29,6 +31,16 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [page]);
+
+  useEffect(() => {
+  // Simule un temps de chargement des ressources
+  const timer = setTimeout(() => setIsLoading(false), 2500);
+  return () => clearTimeout(timer);
+}, []);
+
+if (isLoading) {
+  return <Preloader />;
+}
 
   return (
     <div className="min-h-screen bg-[#FFF0F0] text-pink-950 font-sans pb-24 md:pb-0 selection:bg-pink-100">

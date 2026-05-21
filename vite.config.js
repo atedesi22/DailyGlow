@@ -21,6 +21,15 @@ export default defineConfig({
         serif: ['Playfair Display', 'serif'],
         sans: ['Montserrat', 'sans-serif'],
       },
+      animation: {
+        'loading-bar': 'load 2s ease-in-out infinite',
+      },
+      keyframes: {
+        load: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        }
+      }
     },
   },
   plugins: [
