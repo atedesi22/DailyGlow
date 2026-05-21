@@ -20,7 +20,6 @@ export default function Navbar({ cartCount, activePage, onChangePage }) {
           
           {/* LOGO */}
           <div className="cursor-pointer flex flex-col" onClick={() => onChangePage('home')}>
-            
             <img src='/logo.png' className='w-25 h-25'/>
             {/* <img src="" alt="" /> */}
             {/* <span className="font-serif text-2xl font-bold tracking-wider text-[#2B0F1A]">DG</span>
