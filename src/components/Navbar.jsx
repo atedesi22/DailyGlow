@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { ShoppingBag, Menu, X, Home, ShieldCheck, Phone, Layers, Compass } from 'lucide-react';
+import { useCart } from '../context/CartContext';
+
 
 export default function Navbar({ cartCount, activePage, onChangePage }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const { cart } = useCart();
+
 
   const navItems = [
     { id: 'home', label: 'Accueil', icon: Home },

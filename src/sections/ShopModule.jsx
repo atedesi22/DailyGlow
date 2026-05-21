@@ -1,14 +1,18 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { ShoppingBag, Search, Filter, Sparkles } from 'lucide-react';
+import { ShoppingBag, Search, Sparkles } from 'lucide-react';
 import { productsData } from '../data/products';
+import { useCart } from '../context/CartContext';
 
-export default function ShopModule({ onAddToCart, onViewDetails }) {
+export default function ShopModule({ onViewDetails }) {
   const [activeGender, setActiveGender] = useState('Femme');
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("Tous");
   const [shuffledProducts, setShuffledProducts] = useState([]);
+  
+  // Utilisation directe du contexte pour le panier
+  const { addToCart } = useCart();
 
-  // 1. Mélange des produits (Algorithm Fisher-Yates) à chaque montage du composant
+  // 1. Mélange initial des produits
   useEffect(() => {
     const shuffle = (array) => {
       let shuffled = [...array];
@@ -21,7 +25,7 @@ export default function ShopModule({ onAddToCart, onViewDetails }) {
     setShuffledProducts(shuffle(productsData));
   }, []);
 
-  // 2. Extraction dynamique des catégories en fonction du genre sélectionné
+  // 2. Extraction dynamique des catégories
   const categories = useMemo(() => {
     const relevantCats = productsData
       .filter(p => p.gender === activeGender)
@@ -29,7 +33,7 @@ export default function ShopModule({ onAddToCart, onViewDetails }) {
     return ["Tous", ...new Set(relevantCats)];
   }, [activeGender]);
 
-  // 3. Logique de filtrage combinée
+  // 3. Logique de filtrage
   const filteredProducts = shuffledProducts.filter(p => {
     const matchesGender = p.gender === activeGender;
     const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -39,9 +43,7 @@ export default function ShopModule({ onAddToCart, onViewDetails }) {
 
   return (
     <div className="min-h-screen bg-[#FFF0F0] pt-20 px-6 max-w-7xl mx-auto text-[#2B0F1A]">
-      
-
-      {/* En-tête Prestige inspiré du flyer */}
+      {/* En-tête */}
       <div className="text-center mb-10">
         <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#2B0F1A] tracking-wide mb-2">
           Offrez l'Éclat
@@ -51,33 +53,26 @@ export default function ShopModule({ onAddToCart, onViewDetails }) {
         </p>
       </div>
 
-
-      {/* Barre de recherche interactive stylisée */}
+      {/* Recherche */}
       <div className="max-w-md mx-auto mb-8 relative">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
         <input 
           type="text"
           placeholder="Rechercher une pièce unique..."
-          className="w-full p-4 pl-12 rounded-3xl bg-white border border-[#FCD7D7] focus:border-[#C5A059] focus:outline-none focus:ring-4 focus:ring-[#FCD7D7]/40 transition-all text-sm shadow-sm text-[#2B0F1A]"
+          className="w-full p-4 pl-12 rounded-3xl bg-white border border-[#FCD7D7] focus:border-[#C5A059] focus:outline-none transition-all text-sm shadow-sm"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
 
-      {/* Sélecteur de Genre (Homme / Femme) */}
+      {/* Sélecteur Genre */}
       <div className="flex justify-center gap-12 mb-6">
         {['Homme', 'Femme'].map(g => (
           <button 
             key={g}
-            onClick={() => {
-              setActiveGender(g);
-              setActiveCategory("Tous");
-              setSearchTerm("");
-            }}
-            className={`text-lg font-serif pb-2 transition-all tracking-wider ${
-              activeGender === g 
-                ? 'text-[#2B0F1A] border-b-2 border-[#C5A059] font-bold scale-105' 
-                : 'text-gray-400 hover:text-gray-600'
+            onClick={() => { setActiveGender(g); setActiveCategory("Tous"); setSearchTerm(""); }}
+            className={`text-lg font-serif pb-2 transition-all ${
+              activeGender === g ? 'text-[#2B0F1A] border-b-2 border-[#C5A059] font-bold' : 'text-gray-400'
             }`}
           >
             {g}
@@ -85,16 +80,14 @@ export default function ShopModule({ onAddToCart, onViewDetails }) {
         ))}
       </div>
 
-      {/* Barre de Filtre par Catégories */}
+      {/* Catégories */}
       <div className="flex gap-3 overflow-x-auto pb-4 mb-12 no-scrollbar justify-center">
         {categories.map(cat => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-6 py-2 rounded-full text-xs font-medium whitespace-nowrap border transition-all ${
-              activeCategory === cat
-                ? 'bg-[#2B0F1A] text-[#C5A059] border-[#2B0F1A] shadow-md font-bold'
-                : 'bg-white text-gray-500 border-[#FCD7D7] hover:border-[#C5A059]'
+            className={`px-6 py-2 rounded-full text-xs font-medium border transition-all ${
+              activeCategory === cat ? 'bg-[#2B0F1A] text-[#C5A059] border-[#2B0F1A]' : 'bg-white text-gray-500 border-[#FCD7D7]'
             }`}
           >
             {cat}
@@ -102,44 +95,25 @@ export default function ShopModule({ onAddToCart, onViewDetails }) {
         ))}
       </div>
 
-      {/* Grille de produits façon Joaillerie */}
+      {/* Grille */}
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-8 mb-20">
           {filteredProducts.map(product => (
-            <div 
-              key={product.id} 
-              className="bg-white p-4 rounded-[2rem] shadow-sm border border-[#FCD7D7]/60 group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
-            >
+            <div key={product.id} className="bg-white p-4 rounded-[2rem] shadow-sm border border-[#FCD7D7]/60 group flex flex-col justify-between">
               <div className="cursor-pointer" onClick={() => onViewDetails(product)}>
-                {/* Conteneur d'image avec coins très arrondis */}
                 <div className="aspect-square bg-[#FFF0F0] rounded-[1.5rem] mb-4 overflow-hidden">
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                  />
+                  <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                 </div>
-                
                 <div className="px-1">
-                  <span className="text-[9px] uppercase tracking-widest text-[#C5A059] font-bold block mb-1">
-                    ✦ {product.category}
-                  </span>
-                  <h3 className="font-serif text-base text-[#2B0F1A] truncate mb-1 font-medium">
-                    {product.name}
-                  </h3>
-                  <p className="text-[#2B0F1A] font-bold text-sm mb-4">
-                    {product.price} <span className="text-xs font-sans text-[#C5A059]">FCFA</span>
-                  </p>
+                  <span className="text-[9px] uppercase tracking-widest text-[#C5A059] font-bold block mb-1">✦ {product.category}</span>
+                  <h3 className="font-serif text-base text-[#2B0F1A] truncate mb-1">{product.name}</h3>
+                  <p className="text-[#2B0F1A] font-bold text-sm mb-4">{product.price} <span className="text-xs text-[#C5A059]">FCFA</span></p>
                 </div>
               </div>
 
-              {/* Bouton d'ajout épuré et chic */}
               <button 
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onAddToCart(product);
-                }}
-                className="w-full py-3 bg-[#2B0F1A] text-[#C5A059] rounded-2xl text-xs font-bold flex items-center justify-center gap-2 hover:bg-[#C5A059] hover:text-white transition-colors duration-300"
+                onClick={(e) => { e.stopPropagation(); addToCart(product); }}
+                className="w-full py-3 bg-[#2B0F1A] text-[#C5A059] rounded-2xl text-xs font-bold flex items-center justify-center gap-2 hover:bg-[#C5A059] hover:text-white transition-all"
               >
                 <ShoppingBag size={14} /> Ajouter au panier
               </button>
