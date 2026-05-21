@@ -20,9 +20,13 @@ export default function Navbar({ cartCount, activePage, onChangePage }) {
           
           {/* LOGO */}
           <div className="cursor-pointer flex flex-col" onClick={() => onChangePage('home')}>
-            <span className="font-serif text-2xl font-bold tracking-wider text-[#2B0F1A]">DG</span>
-            <span className="text-[8px] uppercase tracking-[0.3em] text-[#C5A059] font-bold -mt-1">DailyGlow</span>
+            
+            <img src='/logo.png' className='w-25 h-25'/>
+            {/* <img src="" alt="" /> */}
+            {/* <span className="font-serif text-2xl font-bold tracking-wider text-[#2B0F1A]">DG</span>
+            <span className="text-[8px] uppercase tracking-[0.3em] text-[#C5A059] font-bold -mt-1">DailyGlow</span> */}
           </div>
+
 
           {/* LIENS NAV - DESKTOP */}
           <div className="hidden md:flex items-center gap-10">
