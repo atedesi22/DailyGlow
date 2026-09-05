@@ -19,7 +19,7 @@ export default function Cart({ onBackToShop }) {
   // const total = calculateTotal();
 
   const generateWhatsAppMessage = () => {
-  const phoneNumber = "237676871669"; // Ton numéro WhatsApp au format international
+  const phoneNumber = "2376000000"; // Ton numéro WhatsApp au format international
   const siteUrl = "https://daily-glow-eta.vercel.app"; // L'URL de ton site en production
   
   let message = `Bonjour DailyGlow ! ✨\n\nJe souhaite passer une commande groupée :\n\n`;
