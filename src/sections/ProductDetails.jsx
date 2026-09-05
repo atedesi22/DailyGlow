@@ -8,7 +8,7 @@ export default function ProductDetails({ product, onBack }) {
 
 
   const generateWhatsAppMessage = () => {
-    const phoneNumber = "237676871669";
+    const phoneNumber = "23760000000";
     const currentImageUrl = activeImage.startsWith('http') 
       ? activeImage 
       : `https://daily-glow-eta.vercel.app${activeImage}`;
